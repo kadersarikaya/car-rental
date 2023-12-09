@@ -8,7 +8,7 @@ import Image from "next/image";
 
 const Card = () => {
   return (
-    <div className="w-[304px] h-[388px] text-black rounded-lg p-6 bg-white">
+    <div className="w-full h-full  text-black rounded-lg p-6 bg-white">
         <div className="flex justify-between">
             <div className="">
                 <h1 className="text-xl font-bold">Koenigsegg</h1>
@@ -20,24 +20,26 @@ const Card = () => {
                 </button>
             </div>
         </div>
-        <Image
-        className="py-16 mx-auto"
-        src="/car.png"
-        width={204}
-        height={70}
-         />
-        <div className="flex justify-between">
-              <div className="flex gap-1 items-center">
-                  <FaGasPump className="text-gray-400 text-md font-medium" />
-                  <p className="text-gray-400 text-sm font-medium">90L</p>
-            </div>
-              <div className="flex gap-1 items-center">
-                  <TbSteeringWheel className="text-gray-400 text-lg font-medium" />
-                  <p className="text-gray-400 text-sm font-medium">Manual</p>
-            </div>
-            <div className="flex gap-1 items-center">
-                  <IoPeople className="text-gray-400 text-lg font-medium" />
-                  <p className="text-gray-400 text-sm font-medium">2 People</p>
+        <div className="flex justify-between md:block md:justify-start">
+            <Image
+            className="py-16 mx-auto"
+            src="/car.png"
+            width={204}
+            height={70}
+            />
+            <div className="flex flex-col md:flex-row justify-between">
+                <div className="flex gap-1 items-center">
+                    <FaGasPump className="text-gray-400 text-md font-medium" />
+                    <p className="text-gray-400 text-sm font-medium">90L</p>
+                </div>
+                <div className="flex gap-1 items-center">
+                    <TbSteeringWheel className="text-gray-400 text-lg font-medium" />
+                    <p className="text-gray-400 text-sm font-medium">Manual</p>
+                </div>
+                <div className="flex gap-1 items-center">
+                    <IoPeople className="text-gray-400 text-lg font-medium" />
+                    <p className="text-gray-400 text-sm font-medium">2 People</p>
+                </div>
             </div>
         </div>
         <div className="flex py-6 justify-between">
