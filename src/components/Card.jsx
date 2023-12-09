@@ -1,7 +1,57 @@
 import React from "react";
+import { FaGasPump } from "react-icons/fa";
+import Button from "./Button";
+import { TbSteeringWheel } from "react-icons/tb";
+import { IoPeople } from "react-icons/io5";
+import { GoHeart, GoHeartFill } from "react-icons/go";
+import Image from "next/image";
 
 const Card = () => {
-  return <div>Card</div>;
+  return (
+    <div className="w-[304px] h-[388px] text-black rounded-lg p-6 bg-white">
+        <div className="flex justify-between">
+            <div className="">
+                <h1 className="text-xl font-bold">Koenigsegg</h1>
+                <span className="text-sm font-bold text-gray-400">Sport</span>
+            </div>
+            <div className="">
+                <button>
+                    <GoHeart className="text-lg" />
+                </button>
+            </div>
+        </div>
+        <Image
+        className="py-16 mx-auto"
+        src="/car.png"
+        width={204}
+        height={70}
+         />
+        <div className="flex justify-between">
+            <div className="flex gap-1">
+                  <FaGasPump className="text-gray-400 text-md font-medium" />
+                  <p className="text-gray-400 text-sm font-medium">90L</p>
+            </div>
+            <div className="flex gap-1">
+                  <TbSteeringWheel className="text-gray-400 text-lg font-medium" />
+                  <p className="text-gray-400 text-sm font-medium">Manual</p>
+            </div>
+            <div className="flex gap-1">
+                  <IoPeople className="text-gray-400 text-lg font-medium" />
+                  <p className="text-gray-400 text-sm font-medium">2 People</p>
+            </div>
+        </div>
+        <div className="flex py-6 justify-between">
+            <div className="">
+                <div className="flex items-center">
+                    <p className="text-xl font-bold" >$99.00/ </p>
+                    <span className="font-medium text-gray-400 text-sm"> day</span>
+                </div>
+                <span className="font-medium line-through text-gray-400 text-sm">$100</span>
+            </div>
+            <Button btntext="Rent Now" />
+        </div>
+    </div>
+  )
 };
 
 export default Card;

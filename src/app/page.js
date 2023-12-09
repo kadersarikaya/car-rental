@@ -1,3 +1,4 @@
+import Card from '@/components/Card'
 import Navbar from '@/components/Navbar'
 import Image from 'next/image'
 
@@ -5,7 +6,7 @@ export default function Home() {
   return (
     <main className="">
      <Navbar/>
-     <section className="flex justify-center items-center">
+     <section className="flex flex-col justify-center items-center">
       <div className="flex gap-6 py-6">
         <Image 
           width={640} 
@@ -18,6 +19,9 @@ export default function Home() {
             src="/ads2.png"
           />
       </div>
+        <section>
+          <Card />
+        </section>
      </section>
     </main>
   )

@@ -1,7 +1,8 @@
 "use client"
 
 import React, { useState } from 'react';
-import { FaSearch, FaUser, FaHeart } from 'react-icons/fa';
+import { FaSearch, FaUser } from 'react-icons/fa';
+import { GoHeartFill } from "react-icons/go";
 
 const Navbar = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -44,13 +45,13 @@ const Navbar = () => {
         {/* User Avatar, Heart Icon, Language Selector */}
         <div className={`md:flex md:items-center ${isMobileMenuOpen ? 'block' : 'hidden'}`}>
           <div className="md:flex items-center">
-            <div className="relative cursor-pointer  flex md:gap-0 gap-2 md:mt-0 mt-4 items-center">
-             <FaHeart className="text-gray-700 cursor-pointer" />
+            <div className="relative cursor-pointer flex md:gap-0 gap-2 md:mt-0 mt-4 items-center">
+              <GoHeartFill className="text-gray-700 cursor-pointer text-xl" />
               <p className="md:hidden block text-gray-700" >Favorites</p>
             </div>
             <div className="relative cursor-pointer md:ml-4 md:gap-0 md:mt-0 flex gap-2 mt-4 items-center">
               <FaUser className="text-gray-700 cursor-pointer" />
-              <p className="md:hidden block text-gray-700" >Profile</p>
+              <p className="md:hidden block text-gray-700 text-xl" >Profile</p>
               {/* User Dropdown 
               <div className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-2 hidden md:block">
                 <a href="#" className="block px-4 py-2 text-gray-800 hover:bg-gray-200">Profile</a>
