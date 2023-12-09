@@ -27,15 +27,15 @@ const Card = () => {
         height={70}
          />
         <div className="flex justify-between">
-            <div className="flex gap-1">
+              <div className="flex gap-1 items-center">
                   <FaGasPump className="text-gray-400 text-md font-medium" />
                   <p className="text-gray-400 text-sm font-medium">90L</p>
             </div>
-            <div className="flex gap-1">
+              <div className="flex gap-1 items-center">
                   <TbSteeringWheel className="text-gray-400 text-lg font-medium" />
                   <p className="text-gray-400 text-sm font-medium">Manual</p>
             </div>
-            <div className="flex gap-1">
+            <div className="flex gap-1 items-center">
                   <IoPeople className="text-gray-400 text-lg font-medium" />
                   <p className="text-gray-400 text-sm font-medium">2 People</p>
             </div>
