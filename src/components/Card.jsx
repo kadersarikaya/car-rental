@@ -42,7 +42,7 @@ const Card = () => {
                 </div>
             </div>
         </div>
-        <div className="flex py-6 justify-between">
+        <div className="flex py-6 justify-between gap-3 items-center">
             <div className="">
                 <div className="flex items-center">
                     <p className="text-xl font-bold" >$99.00/ </p>
