@@ -10,7 +10,7 @@ const Footer = () => {
         </div>
         <div className="flex gap-4 md:gap-10">
           <div className="">
-            <h2 className="text-xl font-semibold pb-2">About</h2>
+            <h2 className="text-lg md:text-xl font-semibold pb-2">About</h2>
             <ul className="text-gray-400 text-base font-medium">
               <li>
                 <a href="">How it works</a>
@@ -27,7 +27,7 @@ const Footer = () => {
             </ul>
           </div>
           <div className="">
-            <h2 className="text-xl font-semibold pb-2">Community</h2>
+            <h2 className="text-lg md:text-xl font-semibold pb-2">Community</h2>
             <ul className="text-gray-400 text-base font-medium">
               <li>
                 <a href="">Events</a>
@@ -44,7 +44,7 @@ const Footer = () => {
             </ul>
           </div>
           <div className="">
-            <h2 className="text-xl font-semibold pb-2">Socials</h2>
+            <h2 className="text-lg md:text-xl font-semibold pb-2">Socials</h2>
             <ul className="text-gray-400 text-base font-medium">
               <li>
                 <a href="">Discord</a>

@@ -12,7 +12,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-white border border-white-400 p-2 md:p-4">
+    <nav className="bg-white border border-white-400 py-4 px-2 md:px-4">
       <div className="container px-4 md:flex md:justify-between mx-auto items-center">
         <div className="flex justify-between">
         {/* Logo ve Search Input */}
