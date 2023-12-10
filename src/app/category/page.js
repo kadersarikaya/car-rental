@@ -31,27 +31,27 @@ const CarCategory = () => {
                         <div className="flex flex-col gap-4">
                             <div className="flex gap-1 items-center">
                                 <input className="w-4 h-4" type="checkbox" name="" id="" />
-                                <p className="font-md font-semibold text-gray-400">Sport</p>
+                                <p className="font-semibold text-gray-400">Sport</p>
                             </div>
                             <div className="flex gap-1 items-center">
                                 <input className="w-4 h-4" type="checkbox" name="" id="" />
-                                <p className="font-md font-semibold text-gray-400">SUV</p>
+                                <p className="font-semibold text-gray-400">SUV</p>
                             </div>
                             <div className="flex gap-1 items-center">
                                 <input className="w-4 h-4" type="checkbox" name="" id="" />
-                                <p className="font-md font-semibold text-gray-400">MVP</p>
+                                <p className="font-semibold text-gray-400">MVP</p>
                             </div>
                             <div className="flex gap-1 items-center">
                                 <input className="w-4 h-4" type="checkbox" name="" id="" />
-                                <p className="font-md font-semibold text-gray-400">Sedan</p>
+                                <p className="font-semibold text-gray-400">Sedan</p>
                             </div>
                             <div className="flex gap-1 items-center">
                                 <input className="w-4 h-4" type="checkbox" name="" id="" />
-                                <p className="font-md font-semibold text-gray-400">Coupe</p>
+                                <p className="font-semibold text-gray-400">Coupe</p>
                             </div>
                             <div className="flex gap-1 items-center">
                                 <input className="w-4 h-4" type="checkbox" name="" id="" />
-                                <p className="font-md font-semibold text-gray-400">Hatchback</p>
+                                <p className="font-semibold text-gray-400">Hatchback</p>
                             </div>
                         </div>
                     </div>
@@ -60,19 +60,19 @@ const CarCategory = () => {
                         <div className="flex flex-col gap-4">
                             <div className="flex gap-1 items-center">
                                 <input className="w-4 h-4" type="checkbox" name="" id="" />
-                                <p className="font-md font-semibold text-gray-400">2 Person</p>
+                                <p className="font-semibold text-gray-400">2 Person</p>
                             </div>
                             <div className="flex gap-1 items-center">
                                 <input className="w-4 h-4" type="checkbox" name="" id="" />
-                                <p className="font-md font-semibold text-gray-400">4 Person</p>
+                                <p className="font-semibold text-gray-400">4 Person</p>
                             </div>
                             <div className="flex gap-1 items-center">
                                 <input className="w-4 h-4" type="checkbox" name="" id="" />
-                                <p className="font-md font-semibold text-gray-400">6 Person</p>
+                                <p className="font-semibold text-gray-400">6 Person</p>
                             </div>
                             <div className="flex gap-1 items-center">
                                 <input className="w-4 h-4" type="checkbox" name="" id="" />
-                                <p className="font-md font-semibold text-gray-400">8 or More</p>
+                                <p className="font-semibold text-gray-400">8 or More</p>
                             </div>
                         </div>
                     </div>
@@ -87,14 +87,14 @@ const CarCategory = () => {
                             step="1"
                             className="input-range"
                         />
-                        <div className="flex flex-col gap-2 font-md font-semibold text-gray-400">
+                        <div className="flex flex-col gap-2 font-semibold text-gray-400">
                             Max. ${price}
                         </div>
                     </div>
                 </div>
             </div>
           <div className="flex justify-center items-center flex-col p-4">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
                 <Card/>
                 <Card/>
                 <Card/>
