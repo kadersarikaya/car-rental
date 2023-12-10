@@ -1,12 +1,10 @@
 import Button from '@/components/Button'
 import Card from '@/components/Card'
-import Footer from '@/components/Footer'
-import Navbar from '@/components/Navbar'
 import Image from 'next/image'
 
 export default function Home() {
   return (
-    <section className="flex justify-center items-center flex-col px-4">
+    <section className="flex justify-center items-center flex-col">
       <div>
         <div className="flex justify-center items-center md:gap-3 py-6">
           <Image

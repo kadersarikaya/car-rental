@@ -24,7 +24,7 @@ const CarDetail = () => {
     }
 
   return (
-    <div className="flex flex-col gap-8 items-center justify-center py-16 px-4">
+    <div className="flex flex-col gap-8 items-center justify-center pt-8 pb-16 px-4 md:px-8">
         <div className="flex lg:flex-row flex-col gap-8">
             <div className="">
                 <div className="">
