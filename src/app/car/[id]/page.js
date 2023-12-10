@@ -25,28 +25,30 @@ const CarDetail = () => {
 
   return (
     <div className="flex flex-col gap-8 items-center justify-center py-16 px-4">
-        <div className="flex gap-8">
+        <div className="flex lg:flex-row flex-col gap-8">
             <div className="">
-                <img 
-                width={492} 
-                height={360} 
-                src={selectedImage} 
-                className="rounded-lg"
-                />
-                <div className="flex justify-between pt-6 items-center">
-                    {productData.images.map((image, index) => (
-                        <img 
-                        key={index} 
-                        src={image} 
-                            className={`rounded-lg cursor-pointer border-4 ${selectedImage === image ? "border-white" : "border-transparent"
-                            }`}
-                        alt={`Car ${index + 1}`}
-                        onClick={() => handleImageClick(image)}
-                        />
-                    ))}
+                <div className="">
+                    <img 
+                    width={492} 
+                    height={360} 
+                    src={selectedImage} 
+                    className="rounded-lg"
+                    />
+                    <div className="flex lg:justify-between flex-wrap pt-6 items-center">
+                        {productData.images.map((image, index) => (
+                            <img
+                                key={index}
+                                src={image}
+                                className={`rounded-lg w-auto cursor-pointer border-4 ${selectedImage === image ? "border-white" : "border-transparent"
+                                    }`}
+                                alt={`Car ${index + 1}`}
+                                onClick={() => handleImageClick(image)}
+                            />
+                        ))}
+                    </div>
                 </div>
             </div>
-            <div className="bg-white rounded-lg p-6 flex flex-col justify-between w-[492px] h-auto">
+            <div className="bg-white rounded-lg p-6 flex flex-col gap-4 justify-between md:w-[492px] h-auto">
                 <div className="flex justify-between">
                     <div className="">
                         <h1 className="text-3xl font-bold" >Nissan GT - R</h1>
@@ -60,7 +62,7 @@ const CarDetail = () => {
                     </div>
                 </div>
                 <div className="">
-                    <p className="text-gray-400 text-xl leading-10 font-medium">NISMO has become the embodiment of 
+                    <p className="text-gray-400 text-lg md:text-xl leading-0 md:leading-10 font-medium">NISMO has become the embodiment of 
                     Nissan's outstanding performance, 
                     inspired by the most unforgiving 
                     proving ground, the "race track".
