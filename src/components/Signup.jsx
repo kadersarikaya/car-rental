@@ -2,15 +2,13 @@
 import React, { useState } from 'react';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
-import { signInWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from '@/firebase';
-import { useRouter } from 'next/navigation';
-import Signup from '@/components/Signup';
+import LoginForm from '@/app/page';
 
-const LoginForm = () => {
-    const router = useRouter()
+const Signup = () => {
     const [error, setError] = useState()
-    const [showSignupForm, setShowSignupForm] = useState(false);  // Add state for showing SignupForm
+    const [showLoginForm, setShowLoginForm] = useState(false);  // Add state for showing LoginForm
 
     const formik = useFormik({
         initialValues: {
@@ -22,32 +20,35 @@ const LoginForm = () => {
             password: Yup.string().min(6, 'Password must be at least 6 characters').required('Password is required'),
         }),
         onSubmit: (values) => {
-            signInWithEmailAndPassword(auth, values.email, values.password)
+            createUserWithEmailAndPassword(auth, values.email, values.password)
                 .then((userCredential) => {
-                    // Signed in 
+                    // Signed up 
                     const user = userCredential.user;
-                    router.push("/home")
+                    console.log(user)
+                    // ...
                 })
                 .catch((error) => {
+                    console.log(error)
                     setError(error)
+                    // ..
                 });
+            console.log('Form Submitted', values);
         },
     });
 
-    // Function to show SignupForm
-    const showSignup = () => {
-        setShowSignupForm(true);
+    const showLogin = () => {
+        setShowLoginForm(true);
     };
 
-    // Conditional rendering based on showSignupForm state
-    if (showSignupForm) {
-        return <Signup/>
+    // Conditional rendering based on showLoginForm state
+    if (showLoginForm) {
+        return <LoginForm/>
     }
 
     return (
         <div className="bg-gray-200 min-h-screen flex items-center justify-center">
             <div className="bg-white p-8 rounded shadow-md w-full max-w-md">
-                <h2 className="text-2xl font-bold mb-6 text-center">Login</h2>
+                <h2 className="text-2xl font-bold mb-6 text-center">Register</h2>
                 <form onSubmit={formik.handleSubmit}>
                     <div className="mb-4">
                         <label htmlFor="email" className="block text-gray-700 text-sm font-bold mb-2">
@@ -89,17 +90,16 @@ const LoginForm = () => {
                         type="submit"
                         className="bg-blue-500 text-white p-2 rounded w-full hover:bg-blue-600"
                     >
-                        Login
+                        Sign Up
                     </button>
-                    <p className="text-red-500 text-sm mt-1">{error}</p>
                 </form>
                 <p className="text-sm text-center mt-4">
-                    Don't have an account?{' '}
+                    Already have an account?{' '}
                     <span
                         className="text-blue-500 hover:underline cursor-pointer"
-                        onClick={showSignup}  // Call showSignup function on click
+                        onClick={showLogin}  // Call showLogin function on click
                     >
-                        Sign Up
+                        Login
                     </span>
                 </p>
             </div>
@@ -107,4 +107,4 @@ const LoginForm = () => {
     );
 };
 
-export default LoginForm;
+export default Signup;

@@ -27,7 +27,32 @@ const Payment = () => {
     };
 
     return (
-        <div className="flex flex-col lg:flex-row max-h-max justify-around px-8 pt-8 pb-24">
+        <div className="flex flex-col lg:flex-row max-h-max justify-center gap-8 px-4 pt-8 pb-24">
+            <div className="max-w-lg w-full lg:w-1/2 h-fit flex flex-col gap-8 flex-1 p-8 bg-white rounded-md shadow-md">
+                <h1 className="text-2xl font-bold mb-6">Rental Summary</h1>
+                <div className="flex gap-6 items-center">
+                    <img src="https://via.placeholder.com/132x108" alt="" />
+                    <div className="">
+                        <h1 className='text-2xl md:text-3xl font-bold' >Nissan GT - R</h1>
+                        <Rating value={2.5} />
+                    </div>
+                </div>
+                <hr />
+                <div className="flex flex-col gap-6">
+                    <div className="flex justify-between">
+                        <p className='text-gray-400 font-medium text-base'>Subtotal</p>
+                        <p className='font-semibold text-base'>$80.00</p>
+                    </div>
+                    <div className="flex justify-between">
+                        <p className='text-gray-400 font-medium text-base'>Tax</p>
+                        <p className='font-semibold text-base'>$0</p>
+                    </div>
+                    <div className="flex pt-4 justify-between">
+                        <p className='text-xl font-bold' >Total Rental Price</p>
+                        <p className='font-bold text-3xl' >$80.00</p>
+                    </div>
+                </div>
+            </div>
             <div className="max-w-lg w-full lg:w-1/2 h-fit flex-1 p-8 bg-white rounded-md shadow-md mb-8 lg:mb-0">
                 <h1 className="text-2xl font-bold mb-6">Billing Info</h1>
                 <Formik
@@ -92,31 +117,6 @@ const Payment = () => {
                         </div>
                     </Form>
                 </Formik>
-            </div>
-            <div className="max-w-lg w-full lg:w-1/2 h-fit flex flex-col gap-8 flex-1 p-8 bg-white rounded-md shadow-md">
-                <h1 className="text-2xl font-bold mb-6">Rental Summary</h1>
-                <div className="flex gap-6 items-center">
-                    <img src="https://via.placeholder.com/132x108" alt="" />
-                    <div className="">
-                        <h1 className='text-3xl font-bold' >Nissan GT - R</h1>
-                        <Rating value={2.5} />
-                    </div>
-                </div>
-                <hr />
-                <div className="flex flex-col gap-6">
-                    <div className="flex justify-between">
-                        <p className='text-gray-400 font-medium text-base'>Subtotal</p>
-                        <p className='font-semibold text-base'>$80.00</p>
-                    </div>
-                    <div className="flex justify-between">
-                        <p className='text-gray-400 font-medium text-base'>Tax</p>
-                        <p className='font-semibold text-base'>$0</p>
-                    </div>
-                    <div className="flex pt-4 justify-between">
-                        <p className='text-xl font-bold' >Total Rental Price</p>
-                        <p className='font-bold text-3xl' >$80.00</p>
-                    </div>
-                </div>
             </div>
         </div>
     );
