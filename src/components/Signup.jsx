@@ -42,7 +42,7 @@ const Signup = () => {
 
     // Conditional rendering based on showLoginForm state
     if (showLoginForm) {
-        return <LoginForm/>
+        return <LoginForm />
     }
 
     return (

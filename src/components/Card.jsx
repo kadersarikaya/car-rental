@@ -21,9 +21,9 @@ const Card = () => {
             </div>
         </div>
         <div className="flex justify-between md:block md:justify-start">
-            <Image
+            <img
             className="py-16 mx-auto"
-            src="/car.png"
+                  src="https://cdn.motor1.com/images/mgl/bggbXv/s3/2023-nissan-altima-sr-grade.webp"
             width={204}
             height={70}
             />
