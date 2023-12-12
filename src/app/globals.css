@@ -20,3 +20,7 @@ body {
   color: #000;
   background: #EAEAEA;
 }
+
+img {
+  object-fit: fill;
+}

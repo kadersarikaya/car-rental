@@ -3,7 +3,7 @@ import axios from 'axios';
 
 const initialState = {
     cars: [],
-    loadingCars: false,
+    loadingCars: true,
     carDetails: {},
     loadingCarDetails: {}
 };

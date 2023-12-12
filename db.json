@@ -1,0 +1,587 @@
+{
+    "cars": [
+        {
+            "id": 1,
+            "title": "Mercedes-Benz C-Class",
+            "type": "Sedan",
+            "liter": 2.0,
+            "steering": "LHD",
+            "capacity": 4,
+            "price": 600,
+            "priceOnSale": 550,
+            "carImage": "https://vehicle-images.dealerinspire.com/stock-images/chrome/ce328d0f4f9b6afd392346f4bb444e3f.png",
+            "detailImages": [
+                "https://di-uploads-pod1.dealerinspire.com/mercedesbenzofakron/uploads/2021/11/22-c-class-interior.jpg",
+                "https://cdn.otopark.com/wp-content/uploads/2021/02/mercedes-c-klasse-limousine-2021-5.jpg",
+                "https://di-uploads-pod3.dealerinspire.com/fletcherjonesmbnewport/uploads/2022/05/C-2-edit-768x512.jpg"
+            ],
+            "description": "The Mercedes-Benz C-Class is a luxury sedan that combines elegance with cutting-edge technology. With its 2.0-liter engine, it delivers a powerful yet smooth performance. The spacious interior, advanced safety features, and sleek design make it an ideal choice for those who seek both comfort and style.",
+            "rating": 4.8,
+            "reviews": [
+                {
+                    "name": "John Doe",
+                    "comment": "Great car!",
+                    "rating": 5
+                },
+                {
+                    "name": "Jane Smith",
+                    "comment": "Smooth ride.",
+                    "rating": 4
+                },
+                {
+                    "name": "Bob Johnson",
+                    "comment": "Comfortable interior.",
+                    "rating": 4
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "title": "Toyota RAV4",
+            "type": "SUV",
+            "liter": 2.5,
+            "steering": "RHD",
+            "capacity": 5,
+            "price": 350,
+            "carImage": "https://vehicle-images.dealerinspire.com/stock-images/thumbnails/large/chrome/823d079327caf874f9d1e0adb8717950.png",
+            "detailImages": [
+                "https://arbstorage.mncdn.com/modelphotos/11d42484-f183-451f-91cf-274dbf7b313f_912x513.jpg",
+                "https://staticb.yolcu360.com/blog/wp-content/uploads/2021/03/18125627/Toyota-RAV4-2021.jpg",
+                "https://img.kamugundemi.com/storage/files/images/2023/01/08/ocak-2023-toyota-chr-hybrid-camry-kWv6.jpg"
+            ],
+            "description": "The Toyota RAV4 is a compact SUV designed for both city driving and off-road adventures. With its 2.5-liter engine, it offers a fuel-efficient yet powerful performance. The RAV4's spacious interior, advanced safety features, and stylish design make it a popular choice among families and outdoor enthusiasts.",
+            "rating": 4.5,
+            "reviews": [
+                {
+                    "name": "Alice Brown",
+                    "comment": "Fuel-efficient.",
+                    "rating": 4
+                },
+                {
+                    "name": "Charlie Wilson",
+                    "comment": "Spacious interior.",
+                    "rating": 5
+                },
+                {
+                    "name": "Eva Davis",
+                    "comment": "Good value for money.",
+                    "rating": 4
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "title": "Honda Civic",
+            "type": "Coupe",
+            "liter": 1.8,
+            "steering": "LHD",
+            "capacity": 2,
+            "price": 250,
+            "carImage": "https://www.sekizsilindir.com/wp-content/uploads/2017/02/yeni-honda-civic-turbo-fiyat-20.jpg",
+            "detailImages": [
+                "https://cdn.miniyol.com/img/blogs/content/2022/07/original/honda-civic-typer-2023-1658921759-1678266457.png",
+                "https://www.actualidadmotor.com/wp-content/uploads/2022/08/honda-civic-type-r-18.jpg",
+                "https://media.autoexpress.co.uk/image/private/s--Y0Ny57rS--/v1669728442/evo/2022/11/Civic%20Type%20R%20FL5%20review%20.jpg"
+            ],
+            "description": "The Honda Civic is a compact sedan known for its fuel efficiency and reliability. With a 1.8-liter engine, it offers a smooth and efficient ride. The Civic's modern design, advanced safety features, and comfortable interior make it a popular choice for daily commuting.",
+            "rating": 4.2,
+            "reviews": [
+                {
+                    "name": "Grace Miller",
+                    "comment": "Easy to maneuver.",
+                    "rating": 4
+                },
+                {
+                    "name": "Peter Turner",
+                    "comment": "Fun to drive.",
+                    "rating": 4
+                },
+                {
+                    "name": "Sophia Clark",
+                    "comment": "Great fuel efficiency.",
+                    "rating": 5
+                }
+            ],
+            "priceOnSale": 230
+        },
+        {
+            "id": 4,
+            "title": "Ford Explorer",
+            "type": "SUV",
+            "liter": 3.5,
+            "steering": "RHD",
+            "capacity": 7,
+            "price": 450,
+            "carImage": "https://www.ford.de/content/dam/guxeu/rhd/central/cars/2019-explorer/launch/models-specs/ford-explorer_models-eu-st_line-16x9-1600x900-while-explorer-st-line.png.renditions.original.png",
+            "detailImages": [
+                "https://www.vdm.ford.com/content/dam/vdm_ford/live/en_us/ford/nameplate/explorer/2024/collections/equipment/3-2/21_FRD_EPR_400019_32.jpg/jcr:content/renditions/cq5dam.web.768.768.jpeg",
+                "https://ioto.tmgrup.com.tr/gallery/2023/03/21/4MjvBSLH5hZBRtu9dBXg8Ux6seDOajC2rOsaFy8R.jpg",
+                "https://cdn.motor1.com/images/mgl/P33eVA/s3/2023-ford-explorer-cn.jpg"
+            ],
+            "description": "The Ford Explorer is a midsize SUV that combines performance with versatility. With a 3.5-liter engine and a capacity for 7 passengers, it is perfect for family trips. The Explorer's advanced technology features, comfortable interior, and rugged design make it suitable for various lifestyles.",
+            "rating": 4.6,
+            "reviews": [
+                {
+                    "name": "Michael Baker",
+                    "comment": "Lots of cargo space.",
+                    "rating": 5
+                },
+                {
+                    "name": "Olivia Turner",
+                    "comment": "Comfortable for long trips.",
+                    "rating": 4
+                },
+                {
+                    "name": "William Parker",
+                    "comment": "Smooth handling.",
+                    "rating": 4
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "title": "Chevrolet Camaro",
+            "type": "Coupe",
+            "liter": 6.2,
+            "steering": "LHD",
+            "capacity": 2,
+            "price": 550,
+            "carImage": "https://www.motortrend.com/uploads/sites/10/2020/12/2021-chevrolet-camaro-zl1-coupe-angular-front.png",
+            "detailImages": [
+                "https://hips.hearstapps.com/hmg-prod/images/2024-chevrolet-camaro-ss-collectors-edition-1-647e1933c6c20.jpg?crop=0.755xw:0.696xh;0.112xw,0.233xh&resize=1200:*",
+                "https://arabam-blog.mncdn.com/wp-content/uploads/2021/03/822061.jpg",
+                "https://i2.wp.com/1.bp.blogspot.com/-2low5R2lp4E/Vu-k6e8vNpI/AAAAAAAAsg0/ozAzOTGdfYQl4YZAMSi-cq4p0wLeZ9G5A/s1600/Chevrolet-Camaro-ZL1-15.jpg?ssl=1"
+            ],
+            "description": "The Chevrolet Camaro is a classic American muscle car known for its powerful performance and iconic design. With a 6.2-liter engine, it offers an exhilarating driving experience. The Camaro's bold exterior, high-performance features, and rich history make it a favorite among car enthusiasts.",
+            "rating": 3,
+            "reviews": [
+                {
+                    "name": "Emma Turner",
+                    "comment": "Love the roar of the engine.",
+                    "rating": 5
+                },
+                {
+                    "name": "James White",
+                    "comment": "Head-turning design.",
+                    "rating": 4
+                },
+                {
+                    "name": "Sophie Adams",
+                    "comment": "Fast acceleration.",
+                    "rating": 5
+                }
+            ]
+        },
+        {
+            "id": 6,
+            "title": "Nissan Altima",
+            "type": "Sedan",
+            "liter": 2.5,
+            "steering": "RHD",
+            "capacity": 4,
+            "price": 280,
+            "carImage": "https://cars.usnews.com/static/images/Auto/izmo/i4912199/2017_nissan_altima_angularfront.jpg",
+            "detailImages": [
+                "https://static.tcimg.net/vehicles/gallery/6c61f95003bfad41/2024-Nissan-Altima.jpg",
+                "https://cdn.motor1.com/images/mgl/bggbXv/s3/2023-nissan-altima-sr-grade.webp",
+                "https://cdn.motor1.com/images/mgl/400kMq/s1/2023-nissan-altima-sr-grade.jpg"
+            ],
+            "description": "The Nissan Altima is a midsize sedan that offers a balance of performance and fuel efficiency. With a 2.5-liter engine, it provides a smooth and comfortable ride. The Altima's modern design, advanced safety features, and spacious interior make it a popular choice for daily commuting.",
+            "rating": 2.4,
+            "reviews": [
+                {
+                    "name": "David Turner",
+                    "comment": "Smooth ride.",
+                    "rating": 4
+                },
+                {
+                    "name": "Isabella Davis",
+                    "comment": "Comfortable interior.",
+                    "rating": 4
+                },
+                {
+                    "name": "Andrew Harris",
+                    "comment": "Great fuel efficiency.",
+                    "rating": 5
+                }
+            ]
+        },
+        {
+            "id": 7,
+            "title": "Tesla Model 3",
+            "type": "Electric",
+            "liter": 0.0,
+            "steering": "LHD",
+            "capacity": 5,
+            "price": 600,
+            "carImage": "https://service.tesla.com/docs/Public/diy/images/GUID-BEE67A59-6DD7-460C-9C49-0DD47E707A02-online-en-US.png",
+            "detailImages": [
+                "https://www.topgear.com/sites/default/files/2023/11/TopGear%20-%20Tesla%20Model%203%20-%20Facelift%20-8.jpg",
+                "https://egetelgrafcom.teimg.com/crop/1280x720/egetelgraf-com/uploads/2023/09/yeni-tesla-model-3-tanitildi.jpg",
+                "https://cdn.webrazzi.com/uploads/2017/07/tesla-model-3.jpg"
+            ],
+            "description": "The Tesla Model S is an electric sedan known for its cutting-edge technology and high-performance capabilities. With dual electric motors, it offers instant acceleration and a long electric range. The Model S's minimalist interior, autopilot features, and sleek design make it a symbol of modern electric vehicles.",
+            "rating": 3.9,
+            "reviews": [
+                {
+                    "name": "Sophia Harris",
+                    "comment": "Amazing acceleration.",
+                    "rating": 5
+                },
+                {
+                    "name": "Daniel Turner",
+                    "comment": "Sleek design.",
+                    "rating": 5
+                },
+                {
+                    "name": "Ella Miller",
+                    "comment": "High-tech interior.",
+                    "rating": 5
+                }
+            ]
+        },
+        {
+            "id": 8,
+            "title": "Jeep Wrangler",
+            "type": "SUV",
+            "liter": 3.6,
+            "steering": "RHD",
+            "capacity": 4,
+            "price": 400,
+            "carImage": "https://www.jeep.co.uk/content/dam/jeep/crossmarket/wrangler-full-model-mca-2024/02-trim-selector/sahara/figurines/sahara-black-565x330.png",
+            "detailImages": [
+                "https://car-images.bauersecure.com/wp-images/13298/wrangler392_01.jpg",
+                "https://www.jeep-india.com/content/dam/cross-regional/apac/jeep/en_in/wrangler-price-reveal/15thMarch-launch/Interior-Seating-Sahara-Black-Leather-Trim-31-5.jpg.img.2880.jpg.img.1440.jpg",
+                "https://www.topgear.com/sites/default/files/2022/01/wrangler80thwales8-60f97a3c0ae8a.jpeg"
+            ],
+            "description": "The Jeep Wrangler is an iconic off-road SUV designed for adventure seekers. With a rugged design, four-wheel drive, and removable top and doors, it offers an unmatched open-air driving experience. The Wrangler's durability, off-road capabilities, and unique style make it a favorite among outdoor enthusiasts.",
+            "rating": 4.6,
+            "reviews": [
+                {
+                    "name": "Matthew Turner",
+                    "comment": "Great off-road capabilities.",
+                    "rating": 5
+                },
+                {
+                    "name": "Emily Parker",
+                    "comment": "Fun to drive.",
+                    "rating": 4
+                },
+                {
+                    "name": "Nathan White",
+                    "comment": "Sturdy build.",
+                    "rating": 4
+                }
+            ]
+        },
+        {
+            "id": 9,
+            "title": "BMW 5 Series",
+            "type": "Sedan",
+            "liter": 3.0,
+            "steering": "LHD",
+            "capacity": 5,
+            "price": 550,
+            "carImage": "https://www.bmw.ie/content/dam/bmw/common/all-models/5-series/sedan/2023/5-series-sedan-silver.png",
+            "detailImages": [
+                "https://hips.hearstapps.com/hmg-prod/images/p90505129-646d1a2f5be2a.jpeg?resize=980:*",
+                "https://www.topgear.com/sites/default/files/2023/10/P90505000_highRes.jpg",
+                "https://imgd.aeplcdn.com/664x374/n/cw/ec/96443/5-series-interior-steering-wheel.jpeg?q=80"
+            ],
+            "description": "The BMW 5 Series is a luxury midsize sedan that represents the perfect blend of performance, elegance, and advanced technology. Powered by a range of efficient engines, including the powerful 3.0-liter inline-six, it offers a dynamic driving experience with a perfect balance of sportiness and comfort. The 5 Series boasts a sophisticated interior with premium materials, cutting-edge infotainment features, and driver-assistance technologies. Its sleek design, distinctive kidney grille, and iconic BMW styling cues make it a symbol of executive style and automotive excellence.",
+            "rating": 3.7,
+            "reviews": [
+                {
+                    "name": "Oliver Harris",
+                    "comment": "Smooth handling.",
+                    "rating": 4
+                },
+                {
+                    "name": "Emma Turner",
+                    "comment": "Luxurious interior.",
+                    "rating": 5
+                },
+                {
+                    "name": "Jack Davis",
+                    "comment": "Impressive technology features.",
+                    "rating": 4
+                }
+            ]
+        },
+        {
+            "id": 10,
+            "title": "Audi Q5",
+            "type": "SUV",
+            "liter": 2.0,
+            "steering": "RHD",
+            "capacity": 5,
+            "price": 480,
+            "carImage": "https://immagini.alvolante.it/sites/default/files/styles/anteprima_lunghezza_640/public/news_galleria/2023/08/audi-q5-2024-rendering.jpg",
+            "detailImages": [
+                "https://www.sifiraracal.com/resim/galeri/847/33854/audi-q5.jpg",
+                "https://imgd-ct.aeplcdn.com/1056x660/n/cw/ec/53591/q5-facelift-interior-dashboard-10.jpeg?isig=0&q=80",
+                "https://cdn.motor1.com/images/mgl/N0yK9/s3/2019-audi-q5-55-tfsi-e-quattro.webp"
+            ],
+            "description": "The Audi Q5 is a premium compact SUV that seamlessly combines luxury, performance, and versatility. With a sleek and modern design, the Q5 stands out on the road, featuring Audi's signature Singleframe grille and stylish LED headlights. Powered by a range of efficient engines, including the responsive 2.0-liter turbocharged four-cylinder, it delivers a smooth and powerful driving experience. The Q5's well-crafted interior is adorned with high-quality materials, advanced infotainment systems, and comfort-focused features. Equipped with Quattro all-wheel drive, the Q5 provides excellent traction and stability, making it a top choice for those seeking a refined and capable SUV.",
+            "rating": 4.8,
+            "reviews": [
+                {
+                    "name": "Sophie Turner",
+                    "comment": "Smooth ride.",
+                    "rating": 5
+                },
+                {
+                    "name": "Leo Harris",
+                    "comment": "High-quality interior.",
+                    "rating": 4
+                },
+                {
+                    "name": "Ava White",
+                    "comment": "Great visibility.",
+                    "rating": 4
+                }
+            ]
+        },
+        {
+            "id": 11,
+            "title": "Chevrolet Malibu",
+            "type": "Sedan",
+            "liter": 1.5,
+            "steering": "LHD",
+            "capacity": 4,
+            "price": 300,
+            "carImage": "https://images.hgmsites.net/med/2023-chevrolet-malibu-4-door-sedan-1lt-angular-front-exterior-view_100867500_m.jpg",
+            "detailImages": [
+                "https://cargtr.com/wp-content/uploads/2020/12/car-gtr-2-13.jpg.webp",
+                "https://di-uploads-pod4.dealerinspire.com/trappchevy/uploads/2021/03/2021-Chevrolet-Malibu-sociall.jpg",
+                "https://cargtr.com/wp-content/uploads/2020/12/car-gtr-3-14.jpg.webp"
+            ],
+            "description": "The Chevrolet Malibu is a stylish midsize sedan that combines modern design with practical features. With a range of efficient engines, including the fuel-efficient 1.5-liter turbocharged four-cylinder, it offers a comfortable and smooth ride. The Malibu's spacious interior, user-friendly infotainment system, and advanced safety features make it a reliable choice for daily commuting. Its sleek exterior design, aerodynamic profile, and attention to detail contribute to a well-rounded and appealing sedan.",
+            "rating": 4.3,
+            "reviews": [
+                {
+                    "name": "Ryan Davis",
+                    "comment": "Great gas mileage.",
+                    "rating": 4
+                },
+                {
+                    "name": "Grace Turner",
+                    "comment": "Comfortable seats.",
+                    "rating": 4
+                },
+                {
+                    "name": "Lucas Smith",
+                    "comment": "Smooth ride.",
+                    "rating": 4
+                }
+            ],
+            "priceOnSale": 280
+        },
+        {
+            "id": 12,
+            "title": "Mazda CX-5",
+            "type": "SUV",
+            "liter": 2.5,
+            "steering": "RHD",
+            "capacity": 5,
+            "price": 320,
+            "carImage": "https://www.mazda.co.za/globalassets/cars/cx-5/grades/2022/1000x525-2.0l-active-manual.png",
+            "detailImages": [
+                "https://www.mazdausa.com/siteassets/vehicles/2024/cx-5/new-build--price/trims/ext.-360s/2.5-s-select/51k/e360-my24-cx50-selectpackage-rhodiumwhite-016.jpg",
+                "https://di-uploads-pod17.dealerinspire.com/tulleymazda/uploads/2021/03/2021-cx-5-interior-.jpg",
+                "https://dealerinspire-image-library-prod.s3.us-east-1.amazonaws.com/images/EBPR6IaAqSeoonA0GUA82mkvV5KfAVKhgqkVTdZp.jpg"
+            ],
+            "description": "Compact SUV with stylish exterior.",
+            "rating": 4.5,
+            "reviews": [
+                {
+                    "name": "Aiden Turner",
+                    "comment": "Responsive handling.",
+                    "rating": 4
+                },
+                {
+                    "name": "Scarlett Harris",
+                    "comment": "Comfortable ride.",
+                    "rating": 5
+                },
+                {
+                    "name": "Ethan White",
+                    "comment": "Sleek design.",
+                    "rating": 4
+                }
+            ]
+        },
+        {
+            "id": 13,
+            "title": "Volvo XC90",
+            "type": "SUV",
+            "liter": 2.0,
+            "steering": "LHD",
+            "capacity": 7,
+            "price": 550,
+            "carImage": "https://todaysparent.mblycdn.com/uploads/tp/2018/05/2018-Volvo-XC90.jpeg",
+            "detailImages": [
+                "https://www.volvocars.com/images/v/-/media/applications/pdpspecificationpage/my24/xc90-fuel/pdp/xc90-fuel-specshighlight-4x3.jpg?h=1440&iar=0&w=1920",
+                "https://i1.wp.com/www.sekizsilindir.com/wp-content/uploads/2015/04/volvo-xc90-excellence-1.jpg?fit=1600%2C843&ssl=1",
+                "https://www.hancar.com.tr/img/araclar/17282/1.jpg"
+            ],
+            "description": "The Volvo XC90 is a luxury SUV that exemplifies Scandinavian design and innovation. With a focus on safety, the XC90 features advanced driver-assistance technologies and a robust chassis. Powered by a range of efficient engines, including the powerful T6 and T8 hybrid options, it delivers a smooth and comfortable driving experience. The XC90's spacious and luxurious interior, intuitive infotainment system, and elegant design make it a top choice for those who prioritize safety and style in a premium SUV.",
+            "rating": 3.8,
+            "reviews": [
+                {
+                    "name": "Isaac Turner",
+                    "comment": "Spacious interior.",
+                    "rating": 5
+                },
+                {
+                    "name": "Lily Harris",
+                    "comment": "Smooth ride.",
+                    "rating": 4
+                },
+                {
+                    "name": "Jackson Smith",
+                    "comment": "Impressive technology.",
+                    "rating": 5
+                }
+            ]
+        },
+        {
+            "id": 14,
+            "title": "Hyundai Elantra",
+            "type": "Sedan",
+            "liter": 2.0,
+            "steering": "RHD",
+            "capacity": 5,
+            "price": 250,
+            "carImage": "https://s7d1.scene7.com/is/image/hyundai/2024-elantra-limited-intense-blue-vehicle-browse-hero:Browse?fmt=webp-alpha",
+            "detailImages": [
+                "https://hips.hearstapps.com/hmg-prod/images/2024-hyundai-elantra-limited-106-64ef85e2044f5.jpg?crop=0.661xw:0.496xh;0.197xw,0.381xh&resize=1200:*",
+                "https://cars.usnews.com/static/images/Auto/izmo/i108385752/2019_hyundai_elantra_dashboard.jpg",
+                "https://imgd.aeplcdn.com/664x374/n/cw/ec/41138/elantra-interior-dashboard.jpeg?q=80"
+            ],
+            "description": "The Hyundai Elantra is a compact sedan that offers a winning combination of affordability and practicality. With a fuel-efficient engine lineup, including the efficient 2.0-liter four-cylinder, it provides an economical and reliable option for daily transportation. The Elantra's modern design, user-friendly features, and advanced safety technologies make it an appealing choice for individuals and families alike. Its comfortable interior, smooth ride, and comprehensive warranty coverage further contribute to its popularity in the compact sedan segment.",
+            "rating": 2.2,
+            "reviews": [
+                {
+                    "name": "Oscar Turner",
+                    "comment": "Great value for money.",
+                    "rating": 4
+                },
+                {
+                    "name": "Natalie Harris",
+                    "comment": "Fuel-efficient.",
+                    "rating": 4
+                },
+                {
+                    "name": "Logan White",
+                    "comment": "Smooth ride.",
+                    "rating": 4
+                }
+            ],
+            "priceOnSale": 230
+        },
+        {
+            "id": 15,
+            "title": "Porsche 911",
+            "type": "Coupe",
+            "liter": 3.0,
+            "steering": "LHD",
+            "capacity": 2,
+            "price": 1200,
+            "carImage": "https://www.porsche.com.tr/img/modellist/911-turbo-s.jpg",
+            "detailImages": [
+                "https://files.porsche.com/filestore/image/multimedia/none/911-tus-cab-modelimage-sideshot/model/9e30bd39-95bf-11ea-80c9-005056bbdc38/porsche-model.png",
+                "https://cdn.motor1.com/images/mgl/VmVwy/s3/porsche-911-turbo-s.jpg",
+                "https://t911.wpengine.com/wp-content/uploads/2011/09/P11_0636-e1315910278442.jpg"
+            ],
+            "description": "The Porsche 911 is an iconic sports car that has set the standard for high-performance driving for decades. With a rear-engine layout and a range of powerful flat-six engines, including turbocharged options, the 911 delivers thrilling acceleration and precise handling. Known for its timeless design, the 911 features distinctive lines, a signature rear spoiler, and a driver-focused cockpit. The 911's superior engineering, track-ready capabilities, and luxurious interior make it a true enthusiast's choice for those seeking the pinnacle of sports car performance.",
+            "rating": 4.2,
+            "reviews": [
+                {
+                    "name": "Oscar Turner",
+                    "comment": "Great value for money.",
+                    "rating": 4
+                },
+                {
+                    "name": "Natalie Harris",
+                    "comment": "Fuel-efficient.",
+                    "rating": 4
+                },
+                {
+                    "name": "Logan White",
+                    "comment": "Smooth ride.",
+                    "rating": 4
+                }
+            ],
+            "priceOnSale": 100
+        },
+        {
+            "id": 16,
+            "title": "Volkswagen Golf GTI",
+            "type": "Hatchback",
+            "liter": 2.0,
+            "steering": "LHD",
+            "capacity": 5,
+            "price": 320,
+            "carImage": "https://file.kelleybluebookimages.com/kbb/base/evox/CP/53005/2023-Volkswagen-Golf%20GTI-front_53005_032_2400x1800_0P0P.png",
+            "detailImages": [
+                "https://iasbh.tmgrup.com.tr/e41413/0/0/0/0/0/0?u=https://iahbr.tmgrup.com.tr/album/2018/05/13/2018-volkswagen-golf-gti-tcr-concept-1526190075456.jpg&mw=752",
+                "https://www.carviser.com/wp-content/uploads/2020/01/Yeni-VW-Golf-GTI-Carviser.jpg",
+                "https://di-uploads-pod13.dealerinspire.com/stohlmanvolkswagen/uploads/2019/04/VW-GTI-Interior.jpg"
+            ],
+            "description": "The Volkswagen Golf GTI is a sporty hatchback with a 2.0-liter turbocharged engine. Offering a blend of performance and practicality, it accommodates 5 passengers. The Golf GTI features a responsive handling, distinctive design, and modern interior, making it a popular choice for enthusiasts.",
+            "rating": 4.7,
+            "reviews": [
+                {
+                    "name": "Daniel Johnson",
+                    "comment": "Impressive acceleration and handling.",
+                    "rating": 5
+                },
+                {
+                    "name": "Mia Garcia",
+                    "comment": "Fun to drive with a stylish interior.",
+                    "rating": 4
+                },
+                {
+                    "name": "Nathan Turner",
+                    "comment": "Great value for a sporty hatchback.",
+                    "rating": 4
+                }
+            ]
+        },
+        {
+            "id": 17,
+            "title": "Honda Civic Type R",
+            "type": "Hatchback",
+            "liter": 2.0,
+            "steering": "LHD",
+            "capacity": 4,
+            "price": 380,
+            "carImage": "https://s.auto.drom.ru/i24211/c/photos/fullsize/honda/civic_type_r/honda_civic_type_r_745241.jpg",
+            "detailImages": [
+                "https://www.carviser.com/wp-content/uploads/2020/02/Honda-Civic-Type-R-2020-2.jpg",
+                "https://www.hondaakcanlar.com/assets/img/Type-R/kabin-deneyimi.jpg",
+                "https://dogankabak.com.tr/wp-content/uploads/2022/09/Yeni-Honda-Civic-Type-R-780x470.jpg"
+            ],
+            "description": "The Honda Civic Type R is a high-performance hatchback with a 2.0-liter turbocharged engine. Designed for driving enthusiasts, it seats 4 passengers and offers a thrilling driving experience. The Civic Type R boasts sporty styling, advanced aerodynamics, and cutting-edge technology for an exhilarating ride.",
+            "rating": 4.9,
+            "reviews": [
+                {
+                    "name": "Sophie Davis",
+                    "comment": "Unmatched performance in its class.",
+                    "rating": 5
+                },
+                {
+                    "name": "Liam Wilson",
+                    "comment": "Sporty design and agile handling.",
+                    "rating": 5
+                },
+                {
+                    "name": "Ella Thompson",
+                    "comment": "A true driver's car with a stylish interior.",
+                    "rating": 4
+                }
+            ]
+        }
+    ]
+}
