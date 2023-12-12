@@ -6,13 +6,13 @@ import { IoPeople } from "react-icons/io5";
 import { GoHeart, GoHeartFill } from "react-icons/go";
 import Image from "next/image";
 
-const Card = () => {
+const Card = ({car}) => {
   return (
     <div className="w-full h-full  text-black rounded-lg p-6 bg-white">
         <div className="flex justify-between">
             <div className="">
-                <h1 className="text-xl font-bold">Koenigsegg</h1>
-                <span className="text-sm font-bold text-gray-400">Sport</span>
+                <h1 className="text-xl font-bold">{car?.title}</h1>
+                <span className="text-sm font-bold text-gray-400">{car?.type}</span>
             </div>
             <div className="">
                 <button>
@@ -22,33 +22,33 @@ const Card = () => {
         </div>
         <div className="flex justify-between md:block md:justify-start">
             <img
-            className="py-16 mx-auto"
-                  src="https://cdn.motor1.com/images/mgl/bggbXv/s3/2023-nissan-altima-sr-grade.webp"
-            width={204}
-            height={70}
+                className="py-16 mx-auto"
+                src={car?.carImage}
+                width={204}
+                height={70}
             />
             <div className="flex flex-col md:flex-row justify-between">
                 <div className="flex gap-1 items-center">
                     <FaGasPump className="text-gray-400 text-md font-medium" />
-                    <p className="text-gray-400 text-sm font-medium">90L</p>
+                    <p className="text-gray-400 text-sm font-medium">{car?.liter}L</p>
                 </div>
                 <div className="flex gap-1 items-center">
                     <TbSteeringWheel className="text-gray-400 text-lg font-medium" />
-                    <p className="text-gray-400 text-sm font-medium">Manual</p>
+                    <p className="text-gray-400 text-sm font-medium">{car?.steering}</p>
                 </div>
                 <div className="flex gap-1 items-center">
                     <IoPeople className="text-gray-400 text-lg font-medium" />
-                    <p className="text-gray-400 text-sm font-medium">2 People</p>
+                    <p className="text-gray-400 text-sm font-medium">{car?.capacity }People</p>
                 </div>
             </div>
         </div>
         <div className="flex py-6 justify-between gap-3 items-center">
             <div className="">
                 <div className="flex items-center">
-                    <p className="text-xl font-bold" >$99.00/ </p>
+                    <p className="text-xl font-bold" >${car?.price}/ </p>
                     <span className="font-medium text-gray-400 text-sm"> day</span>
                 </div>
-                <span className="font-medium line-through text-gray-400 text-sm">$100</span>
+                <span className="font-medium line-through text-gray-400 text-sm">${car?.priceOnSale}</span>
             </div>
             <Button btntext="Rent Now" />
         </div>

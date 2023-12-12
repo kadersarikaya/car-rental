@@ -12,7 +12,7 @@ export const fetchCars = createAsyncThunk(
     'cars/fetchCars',
     async () => {
         const response = await axios.get(
-            'https://car--rental-default-rtdb.europe-west1.firebasedatabase.app/.json/'
+            'https://car--rental-default-rtdb.europe-west1.firebasedatabase.app/cars.json'
         );
         return response.data
     }
@@ -32,7 +32,7 @@ export const addCar = createAsyncThunk(
     'cars/addCar',
     async (carItem) => {
         const response = await axios.post(
-            `https://car--rental-default-rtdb.europe-west1.firebasedatabase.app/cars/.json/`,
+            `https://car--rental-default-rtdb.europe-west1.firebasedatabase.app/cars.json/`,
             carItem
         );
         return response.data
@@ -54,7 +54,7 @@ export const deleteCar = createAsyncThunk(
     'cars/deleteCar',
     async () => {
         const response = await axios.delete(
-            `https://car--rental-default-rtdb.europe-west1.firebasedatabase.app/cars/.json/`
+            `https://car--rental-default-rtdb.europe-west1.firebasedatabase.app/cars.json/`
         );
         return response.data
     }
@@ -89,7 +89,7 @@ const carsSlice = createSlice({
                 state.loadingCarDetails = false;
             })
             .addCase(addCar.fulfilled, (state, action) => {
-                state.cars.push(action.payload)
+                state.cars = [...state.cars, action.payload];
             })
             .addCase(deleteCar.fulfilled, (state, action) => {
                 state.cars = state.cars.filter((car) => car.key !== action.payload)
