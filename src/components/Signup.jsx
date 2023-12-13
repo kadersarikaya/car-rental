@@ -5,11 +5,13 @@ import * as Yup from 'yup';
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from '@/firebase';
 import LoginForm from '@/app/page';
+import { useRouter } from 'next/navigation';
 
 const Signup = () => {
     const [error, setError] = useState()
     const [showLoginForm, setShowLoginForm] = useState(false);  // Add state for showing LoginForm
-
+    const [isLoading, setIsLoading] = useState(false);
+    const router = useRouter()
     const formik = useFormik({
         initialValues: {
             email: '',
@@ -20,19 +22,36 @@ const Signup = () => {
             password: Yup.string().min(6, 'Password must be at least 6 characters').required('Password is required'),
         }),
         onSubmit: (values) => {
+            setIsLoading(true);
             createUserWithEmailAndPassword(auth, values.email, values.password)
                 .then((userCredential) => {
                     // Signed up 
                     const user = userCredential.user;
-                    console.log(user)
+                    router.push("/home")
                     // ...
                 })
                 .catch((error) => {
-                    console.log(error)
-                    setError(error)
-                    // ..
-                });
-            console.log('Form Submitted', values);
+                    console.error(error);
+                    setError('An unexpected error occurred. Please try again.');
+
+                    // You can check the error code to determine the type of error
+                    switch (error.code) {
+                        case 'auth/weak-password':
+                            setError('Password should be at least 6 characters long.');
+                            break;
+                        case 'auth/email-already-in-use':
+                            setError('The email address is already in use by another account.');
+                            break;
+                        case 'auth/invalid-email':
+                            setError('The email address is invalid.');
+                            break;
+                        default:
+                            setError('An unexpected error occurred. Please try again.');
+                    }
+                })
+            .finally(() => {
+                setIsLoading(false);
+            }) 
         },
     });
 
@@ -88,9 +107,15 @@ const Signup = () => {
                     </div>
                     <button
                         type="submit"
-                        className="bg-blue-500 text-white p-2 rounded w-full hover:bg-blue-600"
+                        className={`bg-blue-500 text-white p-2 rounded w-full hover:bg-blue-600 relative ${isLoading ? 'opacity-50 cursor-not-allowed' : ''}`}
+                        disabled={isLoading}
                     >
-                        Sign Up
+                        {isLoading && (
+                            <div className="absolute inset-0 flex items-center justify-center">
+                                <div className="animate-spin h-5 w-5 border-t-2 border-b-2 border-blue-400"></div>
+                            </div>
+                        )}
+                        {isLoading ? 'Loading...' : 'Register'}
                     </button>
                 </form>
                 <p className="text-sm text-center mt-4">
@@ -102,6 +127,11 @@ const Signup = () => {
                         Login
                     </span>
                 </p>
+                {error && (
+                    <div className="text-red-500 text-sm mt-4">
+                        {error}
+                    </div>
+                )}
             </div>
         </div>
     );

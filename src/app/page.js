@@ -11,7 +11,8 @@ const LoginForm = () => {
     const router = useRouter()
     const [error, setError] = useState()
     const [showSignupForm, setShowSignupForm] = useState(false);  // Add state for showing SignupForm
-
+    const [isLoading, setIsLoading] = useState(false);
+    const [userRole, setUserRole] = useState("user")
     const formik = useFormik({
         initialValues: {
             email: '',
@@ -22,18 +23,47 @@ const LoginForm = () => {
             password: Yup.string().min(6, 'Password must be at least 6 characters').required('Password is required'),
         }),
         onSubmit: (values) => {
+            setIsLoading(true);
             signInWithEmailAndPassword(auth, values.email, values.password)
                 .then((userCredential) => {
                     // Signed in 
                     const user = userCredential.user;
-                    router.push("/home")
+                    const userRole = getUserRole();
+
+                    if (userRole === 'admin') {
+                        // User is an admin, redirect to /admin
+                        router.push('/admin');
+                    } else {
+                        // User is not an admin, redirect to /home or another page
+                        router.push('/home');
+                    }
                 })
                 .catch((error) => {
-                    setError(error)
-                });
+                    setError(error.message);
+
+                    // Check the error code to determine the type of error
+                    if (error.code === 'auth/user-not-found') {
+                        setError('User not found. Please check your email or sign up.');
+                    } else if (error.code === 'auth/wrong-password') {
+                        setError('Incorrect password. Please try again.');
+                    } else {
+                        console.error(error);
+                    }
+                })
+                .finally(() => {
+                    setIsLoading(false); 
+                }) 
         },
     });
 
+    const getUserRole = () => {
+        if (formik.values.email === 'admin@morent.com' && formik.values.password === 'admin.0123') {
+            return 'admin';
+        }
+        else {
+            return 'user';
+        }
+    };
     // Function to show SignupForm
     const showSignup = () => {
         setShowSignupForm(true);
@@ -87,11 +117,16 @@ const LoginForm = () => {
                     </div>
                     <button
                         type="submit"
-                        className="bg-blue-500 text-white p-2 rounded w-full hover:bg-blue-600"
+                        className={`bg-blue-500 text-white p-2 rounded w-full hover:bg-blue-600 relative ${isLoading ? 'opacity-50 cursor-not-allowed' : ''}`}
+                        disabled={isLoading}
                     >
-                        Login
+                        {isLoading && (
+                            <div className="absolute inset-0 flex items-center justify-center">
+                                <div className="animate-spin h-5 w-5 border-t-2 border-b-2 border-blue-400"></div>
+                            </div>
+                        )}
+                        {isLoading ? 'Loading...' : 'Login'}
                     </button>
-                    <p className="text-red-500 text-sm mt-1">{error}</p>
                 </form>
                 <p className="text-sm text-center mt-4">
                     Don't have an account?{' '}
@@ -102,6 +137,11 @@ const LoginForm = () => {
                         Sign Up
                     </span>
                 </p>
+                {error && (
+                    <div className="text-red-500 text-sm mt-4">
+                        {error}
+                    </div>
+                )}
             </div>
         </div>
     );

@@ -1,16 +1,17 @@
 "use client"
 import React, {useEffect, useState} from "react";
 import Rating from "@/components/Rating";
-import { GoHeartFill } from "react-icons/go";
+import { GoHeartFill, GoHeart } from "react-icons/go";
 import Button from "@/components/Button";
 import { useParams } from "next/navigation";
 import axios from "axios";
+import { toggleFavorite } from "@/store/favoritesSlice";
+import { useDispatch, useSelector } from "react-redux";
 
 const CarDetail = () => {
     const [showReview, setShowReview] = useState(false)
     const [loading, setLoading] = useState(true)
     const [selectedImage, setSelectedImage] = useState()
-
     const handleImageClick = (image) => {
         setSelectedImage(image);
     };
@@ -36,6 +37,13 @@ const CarDetail = () => {
     useEffect(()=> {
         getCar()
     }, [id])
+
+    const favorites = useSelector((state) => state.favorites);
+    const dispatch = useDispatch()
+
+    const handleFavoriteToggle = () => {
+        dispatch(toggleFavorite({ id: car?.id }));
+    };
 
   return (
     <div className="flex flex-col gap-8 items-center justify-center pt-8 pb-16 px-4 md:px-8">
@@ -74,13 +82,23 @@ const CarDetail = () => {
                             <h1 className="text-3xl font-bold" >{car?.title}</h1>
                             <div className="flex gap-1 pt-4 items-center">
                                 <Rating value={2}/>
-                                <p className="text-sm text-gray-400 font-medium">{car?.reviews.length} Reviewer</p>
+                                <p className="text-sm text-gray-400 font-medium">({car?.reviews?.length} Reviewer)</p>
                             </div>
                         </div>
                         <div className="">
-                            <GoHeartFill className="text-xl text-red-500"/>
+                            <div className="">
+                                {!favorites[car?.id] ? (
+                                    <button onClick={() => handleFavoriteToggle(car?.id)}>
+                                        <GoHeart className="text-lg text-red-500" />
+                                    </button>
+                                ) : (
+                                    <button onClick={() => handleFavoriteToggle(car?.id)}>
+                                        <GoHeartFill className="text-lg text-red-500" />
+                                    </button>
+                                )}
+                            </div>
                         </div>
-                    </div>
+                     </div>
                     <div className="">
                         <p className="text-gray-400 text-lg md:text-xl leading-0 md:leading-8 font-medium">
                             {car?.description}

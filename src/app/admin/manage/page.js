@@ -2,6 +2,7 @@
 "use client"
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import Link from "next/link";
 
 const Admincars = () => {
     const [cars, setCars] = useState([]);
@@ -21,21 +22,24 @@ const Admincars = () => {
         fetchData();
     }, []);
 
-    const handleEdit = (carId) => {
-        // Düzenleme işlemleri burada yapılabilir.
-        console.log("Edit car with ID:", carId);
-    };
-
-    const handleDelete = (carId) => {
-        // Silme işlemleri burada yapılabilir.
-        console.log("Delete car with ID:", carId);
+    const handleDelete = async (id) => {
+        try {
+            await axios.delete(`http://localhost:4000/cars/${id}`);
+           const filtered = cars.filter((car)=>car.id!=id)
+           setCars(filtered)
+            alert("deleted success")
+        } catch (error) {
+            console.error("Error deleting car: ", error);
+        }
     };
 
     return (
         <div className="container mx-auto p-8">
             <div className="flex justify-between items-center mb-8">
-                <h1 className="text-3xl font-bold">Car List</h1>
-                <button className="bg-blue-500 text-white px-4 py-2 rounded-md">+ Add car</button>
+                <div className=""></div>
+                <Link href='/admin/manage/add-car'>
+                    <button className="bg-blue-500 text-white px-4 py-2 rounded-md">+ Add car</button>
+                </Link>
             </div>
             {loading ? (
                 <p>Loading...</p>
@@ -51,12 +55,13 @@ const Admincars = () => {
                             <h2 className="text-lg font-bold mb-2">{car.title}</h2>
                             <p className="text-gray-600 mb-4">${car.price}</p>
                             <div className="flex justify-between items-center">
-                                <button
-                                    onClick={() => handleEdit(car.id)}
-                                    className="text-blue-500 hover:underline"
-                                >
-                                    Edit
-                                </button>
+                                <Link href={`/admin/manage/edit-car/${car.id}`}>
+                                    <button
+                                        className="text-blue-500 hover:underline"
+                                    >
+                                        Edit
+                                    </button>
+                                </Link>
                                 <button
                                     onClick={() => handleDelete(car.id)}
                                     className="text-red-500 hover:underline"
