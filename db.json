@@ -590,5 +590,143 @@
       "description": " mnm",
       "id": 18
     }
+  ],
+  "orders": [
+    {
+      "id": 8,
+      "title": "Jeep Wrangler",
+      "type": "SUV",
+      "liter": 3.6,
+      "steering": "RHD",
+      "capacity": 4,
+      "price": 400,
+      "carImage": "https://www.jeep.co.uk/content/dam/jeep/crossmarket/wrangler-full-model-mca-2024/02-trim-selector/sahara/figurines/sahara-black-565x330.png",
+      "detailImages": [
+        "https://car-images.bauersecure.com/wp-images/13298/wrangler392_01.jpg",
+        "https://www.jeep-india.com/content/dam/cross-regional/apac/jeep/en_in/wrangler-price-reveal/15thMarch-launch/Interior-Seating-Sahara-Black-Leather-Trim-31-5.jpg.img.2880.jpg.img.1440.jpg",
+        "https://www.topgear.com/sites/default/files/2022/01/wrangler80thwales8-60f97a3c0ae8a.jpeg"
+      ],
+      "description": "The Jeep Wrangler is an iconic off-road SUV designed for adventure seekers. With a rugged design, four-wheel drive, and removable top and doors, it offers an unmatched open-air driving experience. The Wrangler's durability, off-road capabilities, and unique style make it a favorite among outdoor enthusiasts.",
+      "rating": 4.6,
+      "reviews": [
+        {
+          "name": "Matthew Turner",
+          "comment": "Great off-road capabilities.",
+          "rating": 5
+        },
+        {
+          "name": "Emily Parker",
+          "comment": "Fun to drive.",
+          "rating": 4
+        },
+        {
+          "name": "Nathan White",
+          "comment": "Sturdy build.",
+          "rating": 4
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Tesla Model 3",
+      "type": "Electric",
+      "liter": 0,
+      "steering": "LHD",
+      "capacity": 5,
+      "price": 600,
+      "carImage": "https://service.tesla.com/docs/Public/diy/images/GUID-BEE67A59-6DD7-460C-9C49-0DD47E707A02-online-en-US.png",
+      "detailImages": [
+        "https://www.topgear.com/sites/default/files/2023/11/TopGear%20-%20Tesla%20Model%203%20-%20Facelift%20-8.jpg",
+        "https://egetelgrafcom.teimg.com/crop/1280x720/egetelgraf-com/uploads/2023/09/yeni-tesla-model-3-tanitildi.jpg",
+        "https://cdn.webrazzi.com/uploads/2017/07/tesla-model-3.jpg"
+      ],
+      "description": "The Tesla Model S is an electric sedan known for its cutting-edge technology and high-performance capabilities. With dual electric motors, it offers instant acceleration and a long electric range. The Model S's minimalist interior, autopilot features, and sleek design make it a symbol of modern electric vehicles.",
+      "rating": 3.9,
+      "reviews": [
+        {
+          "name": "Sophia Harris",
+          "comment": "Amazing acceleration.",
+          "rating": 5
+        },
+        {
+          "name": "Daniel Turner",
+          "comment": "Sleek design.",
+          "rating": 5
+        },
+        {
+          "name": "Ella Miller",
+          "comment": "High-tech interior.",
+          "rating": 5
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Nissan Altima",
+      "type": "Sedan",
+      "liter": 2.5,
+      "steering": "RHD",
+      "capacity": 4,
+      "price": 280,
+      "carImage": "https://cars.usnews.com/static/images/Auto/izmo/i4912199/2017_nissan_altima_angularfront.jpg",
+      "detailImages": [
+        "https://static.tcimg.net/vehicles/gallery/6c61f95003bfad41/2024-Nissan-Altima.jpg",
+        "https://cdn.motor1.com/images/mgl/bggbXv/s3/2023-nissan-altima-sr-grade.webp",
+        "https://cdn.motor1.com/images/mgl/400kMq/s1/2023-nissan-altima-sr-grade.jpg"
+      ],
+      "description": "The Nissan Altima is a midsize sedan that offers a balance of performance and fuel efficiency. With a 2.5-liter engine, it provides a smooth and comfortable ride. The Altima's modern design, advanced safety features, and spacious interior make it a popular choice for daily commuting.",
+      "rating": 2.4,
+      "reviews": [
+        {
+          "name": "David Turner",
+          "comment": "Smooth ride.",
+          "rating": 4
+        },
+        {
+          "name": "Isabella Davis",
+          "comment": "Comfortable interior.",
+          "rating": 4
+        },
+        {
+          "name": "Andrew Harris",
+          "comment": "Great fuel efficiency.",
+          "rating": 5
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "BMW 5 Series",
+      "type": "Sedan",
+      "liter": 3,
+      "steering": "LHD",
+      "capacity": 5,
+      "price": 550,
+      "carImage": "https://www.bmw.ie/content/dam/bmw/common/all-models/5-series/sedan/2023/5-series-sedan-silver.png",
+      "detailImages": [
+        "https://hips.hearstapps.com/hmg-prod/images/p90505129-646d1a2f5be2a.jpeg?resize=980:*",
+        "https://www.topgear.com/sites/default/files/2023/10/P90505000_highRes.jpg",
+        "https://imgd.aeplcdn.com/664x374/n/cw/ec/96443/5-series-interior-steering-wheel.jpeg?q=80"
+      ],
+      "description": "The BMW 5 Series is a luxury midsize sedan that represents the perfect blend of performance, elegance, and advanced technology. Powered by a range of efficient engines, including the powerful 3.0-liter inline-six, it offers a dynamic driving experience with a perfect balance of sportiness and comfort. The 5 Series boasts a sophisticated interior with premium materials, cutting-edge infotainment features, and driver-assistance technologies. Its sleek design, distinctive kidney grille, and iconic BMW styling cues make it a symbol of executive style and automotive excellence.",
+      "rating": 3.7,
+      "reviews": [
+        {
+          "name": "Oliver Harris",
+          "comment": "Smooth handling.",
+          "rating": 4
+        },
+        {
+          "name": "Emma Turner",
+          "comment": "Luxurious interior.",
+          "rating": 5
+        },
+        {
+          "name": "Jack Davis",
+          "comment": "Impressive technology features.",
+          "rating": 4
+        }
+      ]
+    }
   ]
 }

@@ -11,6 +11,7 @@ const validationSchema = Yup.object().shape({
     title: Yup.string().required("Title is required"),
     price: Yup.number().positive("Price must be a positive number").required("Price is required"),
     carImage: Yup.string().url("Invalid image URL").required("Image URL is required"),
+    carDetailImage: Yup.string().url("Invalid image URL").required("Image URL is required"),
     description: Yup.string()
         .min(2, 'Too short')
         .max(250, 'Too long')
@@ -27,6 +28,7 @@ const AddCarPage = () => {
             price: "",
             carImage: "",
             description: "",
+            carDetailImage: "",
         },
         validationSchema,
         onSubmit: async (values) => {

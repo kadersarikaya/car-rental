@@ -7,11 +7,13 @@ import { useParams } from "next/navigation";
 import axios from "axios";
 import { toggleFavorite } from "@/store/favoritesSlice";
 import { useDispatch, useSelector } from "react-redux";
+import Link from "next/link";
 
 const CarDetail = () => {
     const [showReview, setShowReview] = useState(false)
     const [loading, setLoading] = useState(true)
     const [selectedImage, setSelectedImage] = useState()
+
     const handleImageClick = (image) => {
         setSelectedImage(image);
     };
@@ -134,7 +136,9 @@ const CarDetail = () => {
                             </div>
                             {car?.priceOnSale && <span className="font-medium line-through text-gray-400 text-sm">${car.priceOnSale}</span>}
                         </div>
-                        <Button btntext="Rent Now" />
+                        <Link href={`${car.id}/payment`}>
+                            <Button btntext="Rent Now" />
+                        </Link>
                     </div>
                 </div>
                 </div>

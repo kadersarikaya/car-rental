@@ -1,9 +1,11 @@
 "use client"
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import Button from '@/components/Button';
 import Rating from '@/components/Rating';
+import { useParams } from "next/navigation";
+import axios from 'axios';
 
 const Payment = () => {
     const initialValues = {
@@ -12,6 +14,36 @@ const Payment = () => {
         address: '',
         city: '',
     };
+
+    const [car, setCar] = useState();
+    const { id } = useParams()
+    const [loading,setLoading] = useState(false)
+
+    console.log(id)
+    const getCar = async () => {
+        try {
+            const res = await axios.get(`http://localhost:4000/cars/${id}`)
+            setCar(res.data)
+        }
+        catch (error) {
+            console.log(error);
+        }
+    }
+
+    const makeOrder = async () => {
+        try {
+            const res = await axios.post('http://localhost:4000/orders/', car)
+            return res.data
+        }
+        catch (error) {
+            console.log(error);
+        }
+    }
+
+    useEffect(() => {
+        getCar()
+        console.log(car);
+    }, [id])
 
     const validationSchema = Yup.object({
         name: Yup.string().min(3, 'Name must be at least 3 characters').required('Name is required'),
@@ -22,26 +54,26 @@ const Payment = () => {
         city: Yup.string().min(3, 'City must be at least 3 characters').required('City is required'),
     });
 
-    const handleSubmit = (values) => {
-        console.log('Form submitted:', values);
+    const handleSubmit = () => {
+        makeOrder()
     };
 
     return (
         <div className="flex flex-col lg:flex-row max-h-max justify-center gap-8 px-4 pt-8 pb-24">
             <div className="max-w-lg w-full lg:w-1/2 h-fit flex flex-col gap-8 flex-1 p-8 bg-white rounded-md shadow-md">
                 <h1 className="text-2xl font-bold mb-6">Rental Summary</h1>
-                <div className="flex gap-6 items-center">
-                    <img src="https://via.placeholder.com/132x108" alt="" />
+                <div className="items-center">
+                    <img src={car?.carImage} alt="" />
                     <div className="">
-                        <h1 className='text-2xl md:text-3xl font-bold' >Nissan GT - R</h1>
-                        <Rating value={2.5} />
+                        <h1 className='text-2xl md:text-3xl font-bold py-1' >{car?.title}</h1>
+                        <Rating value={car?.rating} />
                     </div>
                 </div>
                 <hr />
                 <div className="flex flex-col gap-6">
                     <div className="flex justify-between">
                         <p className='text-gray-400 font-medium text-base'>Subtotal</p>
-                        <p className='font-semibold text-base'>$80.00</p>
+                        <p className='font-semibold text-base'>{car?.price}</p>
                     </div>
                     <div className="flex justify-between">
                         <p className='text-gray-400 font-medium text-base'>Tax</p>
@@ -49,7 +81,7 @@ const Payment = () => {
                     </div>
                     <div className="flex pt-4 justify-between">
                         <p className='text-xl font-bold' >Total Rental Price</p>
-                        <p className='font-bold text-3xl' >$80.00</p>
+                        <p className='font-bold text-3xl' >${car?.price}</p>
                     </div>
                 </div>
             </div>
@@ -110,10 +142,10 @@ const Payment = () => {
                             <ErrorMessage name="city" component="div" className="text-red-500 text-sm" />
                         </div>
                         <div className="mt-6">
-                            <Button 
-                                btntext='Rent Now' 
+                            <Button
+                                btntext='Rent Now'
                                 type='submit'
-                            />
+                            /> 
                         </div>
                     </Form>
                 </Formik>

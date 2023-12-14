@@ -49,7 +49,7 @@ useEffect(() => {
               <SkeletonCard key={index} />
             ))
             : popularCars.splice(0, 4).map((car) => (
-              <Card key={car.key} car={car} />
+              <Card car={car} />
             ))}
         </div>
         <div className="py-7">
@@ -61,7 +61,7 @@ useEffect(() => {
               <SkeletonCard key={index} />
             ))
             : cars.splice(0, 4).map((car) => (
-              <Card key={car.key} car={car} />
+              <Card car={car} />
             ))}
         </div>
         <div className="py-16 flex justify-center">

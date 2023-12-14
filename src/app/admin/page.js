@@ -1,14 +1,26 @@
 "use client"
-import React, {useEffect, useRef} from "react";
+import React, {useEffect, useState, useRef} from "react";
 import Chart from "chart.js/auto";
+import axios from "axios";
 
 const AdminDashboard = () => {
     const chartRef = useRef(null);
-    
+    const [orders, setOrders] = useState([])
+
+    useEffect(() => {
+        axios
+            .get('http://localhost:4000/orders')
+            .then(res => {
+                setOrders(res.data)
+                setLoading(false)
+            })
+            .catch(err => console.log(err));
+    }, [])
+
     useEffect(() => {
         // Verileriniz
         const data = {
-            labels: ["Sport Car", "SUV", "Coupe", "Hatchback", "MPV"],
+            labels: ["Sedan", "SUV", "Coupe", "Hatchback", "MPV"],
             datasets: [{
                 data: [17439, 9478, 18197, 12510, 14406],
                 backgroundColor: ["#0D3559", "#175D9C", "#2185DE", "#63A9E8", "#A6CEF2"],
@@ -52,7 +64,23 @@ const AdminDashboard = () => {
             <div className="p-6 bg-white rounded-lg w-full ">
                 <h2 className="text-xl font-bold pb-6">Recent Transaction</h2>
                 <div className="scroll-container gap-6 flex flex-col md:max-h-[500px] overflow-y-auto">
-                    <div className="flex flex-col md:flex-row p-4 pr-8 justify-between gap-6">
+                    {orders.map((order)=> (
+                        <div className="flex p-4 pr-8 justify-between gap-6">
+                            <div className="flex gap-6">
+                                <img width={132} height={170} src={order.carImage} alt="" />
+                                <div className="flex flex-col gap-2">
+                                    <h2 className="text-base font-bold">{order.title}</h2>
+                                    <p className="text-[#90A3BF] text-sm font-medium">{order.type}</p>
+                                </div>
+                            </div>
+                            {/* <div className="flex flex-col gap-2">
+                                <p className="text-sm font-medium">20 July</p>
+                                <h2 className="text-base font-bold">$80.00</h2>
+                            </div> */}
+                        </div>
+                    ))}
+                    {/* <hr />
+                    <div className="flex p-4 pr-8 gap-6 justify-between">
                         <div className="flex gap-6">
                             <img src="https://placehold.co/132x70" alt="" />
                             <div className="flex flex-col gap-2">
@@ -66,7 +94,7 @@ const AdminDashboard = () => {
                         </div>
                     </div>
                     <hr />
-                        <div className="flex p-4 pr-8 gap-6 justify-between">
+                    <div className="flex p-4 pr-8 gap-6 justify-between">
                         <div className="flex gap-6">
                             <img src="https://placehold.co/132x70" alt="" />
                             <div className="flex flex-col gap-2">
@@ -80,7 +108,7 @@ const AdminDashboard = () => {
                         </div>
                     </div>
                     <hr />
-                        <div className="flex p-4 pr-8 gap-6 justify-between">
+                    <div className="flex p-4 pr-8 gap-6 justify-between">
                         <div className="flex gap-6">
                             <img src="https://placehold.co/132x70" alt="" />
                             <div className="flex flex-col gap-2">
@@ -94,7 +122,7 @@ const AdminDashboard = () => {
                         </div>
                     </div>
                     <hr />
-                        <div className="flex p-4 pr-8 gap-6 justify-between">
+                    <div className="flex p-4 pr-8 gap-6 justify-between">
                         <div className="flex gap-6">
                             <img src="https://placehold.co/132x70" alt="" />
                             <div className="flex flex-col gap-2">
@@ -106,21 +134,7 @@ const AdminDashboard = () => {
                             <p className="text-sm font-medium">20 July</p>
                             <h2 className="text-base font-bold">$80.00</h2>
                         </div>
-                    </div>
-                    <hr />
-                        <div className="flex p-4 pr-8 gap-6 justify-between">
-                        <div className="flex gap-6">
-                            <img src="https://placehold.co/132x70" alt="" />
-                            <div className="flex flex-col gap-2">
-                                <h2 className="text-base font-bold">Nissan GT - R</h2>
-                                <p className="text-[#90A3BF] text-sm font-medium" >Sport Car</p>
-                            </div>
-                        </div>
-                        <div className="flex flex-col gap-2">
-                            <p className="text-sm font-medium">20 July</p>
-                            <h2 className="text-base font-bold">$80.00</h2>
-                        </div>
-                    </div>
+                    </div> */}
                 </div>
             </div>
             <div className="flex flex-col p-6 bg-white rounded-lg items-center">
