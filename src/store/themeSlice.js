@@ -3,11 +3,17 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const loadThemeFromLocalStorage = () => {
     if (typeof window !== 'undefined') {
-        const storedTheme = JSON.parse(localStorage.getItem('theme'));
-        return storedTheme ? storedTheme.isDarkMode : false;
+        try {
+            const storedTheme = JSON.parse(localStorage.getItem('theme'));
+            return storedTheme ? storedTheme.isDarkMode : false;
+        } catch (error) {
+            console.error('Error parsing theme from local storage', error);
+            return false;
+        }
     }
     return false;
 };
+
 
 export const themeSlice = createSlice({
     name: 'theme',
