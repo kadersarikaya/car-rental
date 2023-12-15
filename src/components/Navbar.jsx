@@ -57,7 +57,7 @@ const Navbar = () => {
               <input
                 type="text"
                 onChange={(e) => setSearchInput(e.target.value)}
-                className="py-2 pl-8 border rounded-md focus:outline-none focus:border-blue-500 transition duration-150"
+                className={`${isDarkMode ? "bg-[#333] text-white" : "bg-white text-black"} py-2 pl-8 border rounded-md focus:outline-none focus:border-blue-500 transition duration-150`}
                 placeholder="Search"
               />
               {/* Display search results */}
