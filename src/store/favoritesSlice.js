@@ -10,7 +10,7 @@ const loadFavoritesFromStorage = () => {
 
 export const favoritesSlice = createSlice({
     name: 'favorites',
-    initialState: loadFavoritesFromStorage(),
+    initialState: loadFavoritesFromStorage() || null,
     reducers: {
         toggleFavorite: (state, action) => {
             const { id } = action.payload;

@@ -18,7 +18,7 @@ const loadThemeFromLocalStorage = () => {
 export const themeSlice = createSlice({
     name: 'theme',
     initialState: {
-        isDarkMode: loadThemeFromLocalStorage(),
+        isDarkMode: loadThemeFromLocalStorage() || "",
     },
     reducers: {
         toggleTheme: (state) => {
@@ -29,6 +29,7 @@ export const themeSlice = createSlice({
         },
     },
     extraReducers: (builder) => {
+        if (typeof window !== 'undefined') {
         builder
             .addDefaultCase((state) => {
                 const storedTheme = JSON.parse(localStorage.getItem('theme'));
@@ -36,6 +37,7 @@ export const themeSlice = createSlice({
                     state.isDarkMode = storedTheme.isDarkMode;
                 }
             });
+        }
     },
 });
 
