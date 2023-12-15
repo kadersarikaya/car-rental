@@ -2,8 +2,10 @@ import { createSlice } from "@reduxjs/toolkit";
 
 // Load favorites from local storage if available
 const loadFavoritesFromStorage = () => {
-    const storedFavorites = localStorage.getItem("favorites");
-    return storedFavorites ? JSON.parse(storedFavorites) : [];
+    if (typeof window !== 'undefined') {
+        const storedFavorites = localStorage.getItem("favorites");
+        return storedFavorites ? JSON.parse(storedFavorites) : [];
+    }
 };
 
 export const favoritesSlice = createSlice({
