@@ -46,15 +46,15 @@ const Card = React.memo = ({ car }) => {
                     <div className="flex flex-col md:flex-row justify-between">
                         <div className="flex gap-1 items-center">
                             <FaGasPump className="text-gray-400 text-md font-medium" />
-                            <p className="text-gray-400 text-sm font-medium">{car?.liter}L</p>
+                            <p className="text-gray-400 text-sm font-medium">{car?.liter } L</p>
                         </div>
                         <div className="flex gap-1 items-center">
                             <TbSteeringWheel className="text-gray-400 text-lg font-medium" />
-                            <p className="text-gray-400 text-sm font-medium">{car?.steering}</p>
+                            <p className="text-gray-400 text-sm font-medium">{car?.steering }</p>
                         </div>
                         <div className="flex gap-1 items-center">
                             <IoPeople className="text-gray-400 text-lg font-medium" />
-                            <p className="text-gray-400 text-sm font-medium">{car?.capacity}People</p>
+                            <p className="text-gray-400 text-sm font-medium">{car?.capacity } People</p>
                         </div>
                     </div>
                 </div>

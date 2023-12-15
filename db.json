@@ -584,11 +584,36 @@
       ]
     },
     {
-      "title": "hughujh",
+      "title": "mdövö",
+      "price": 50,
+      "carImage": "https://img.freepik.com/free-photo/luxurious-car-parked-highway-with-illuminated-headlight-sunset_181624-60607.jpg?size=626&ext=jpg&ga=GA1.1.1222169770.1702339200&semt=sph",
+      "description": " möf vöb",
+      "type": "Coupe",
+      "capacity": "5",
+      "id": 18
+    },
+    {
+      "title": "new title",
+      "price": 0.1,
+      "carImage": "https://imgd.aeplcdn.com/370x208/n/cw/ec/130591/fronx-exterior-right-front-three-quarter-109.jpeg?isig=0&q=80",
+      "description": "error",
+      "id": 19
+    },
+    {
+      "title": "yeni araba ekle",
       "price": 12,
       "carImage": "https://imgd.aeplcdn.com/370x208/n/cw/ec/130591/fronx-exterior-right-front-three-quarter-109.jpeg?isig=0&q=80",
-      "description": " mnm",
-      "id": 18
+      "description": "jsfjebjdk",
+      "id": 20
+    },
+    {
+      "title": "gjhbjvh",
+      "price": 12,
+      "carImage": "https://img.freepik.com/free-photo/luxurious-car-parked-highway-with-illuminated-headlight-sunset_181624-60607.jpg?size=626&ext=jpg&ga=GA1.1.1222169770.1702339200&semt=sph",
+      "description": "mknjk",
+      "type": "Hatchback",
+      "capacity": "4",
+      "id": 21
     }
   ],
   "orders": [
@@ -725,6 +750,185 @@
           "name": "Jack Davis",
           "comment": "Impressive technology features.",
           "rating": 4
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Honda Civic",
+      "type": "Coupe",
+      "liter": 1.8,
+      "steering": "LHD",
+      "capacity": 2,
+      "price": 250,
+      "carImage": "https://www.sekizsilindir.com/wp-content/uploads/2017/02/yeni-honda-civic-turbo-fiyat-20.jpg",
+      "detailImages": [
+        "https://cdn.miniyol.com/img/blogs/content/2022/07/original/honda-civic-typer-2023-1658921759-1678266457.png",
+        "https://www.actualidadmotor.com/wp-content/uploads/2022/08/honda-civic-type-r-18.jpg",
+        "https://media.autoexpress.co.uk/image/private/s--Y0Ny57rS--/v1669728442/evo/2022/11/Civic%20Type%20R%20FL5%20review%20.jpg"
+      ],
+      "description": "The Honda Civic is a compact sedan known for its fuel efficiency and reliability. With a 1.8-liter engine, it offers a smooth and efficient ride. The Civic's modern design, advanced safety features, and comfortable interior make it a popular choice for daily commuting.",
+      "rating": 4.2,
+      "reviews": [
+        {
+          "name": "Grace Miller",
+          "comment": "Easy to maneuver.",
+          "rating": 4
+        },
+        {
+          "name": "Peter Turner",
+          "comment": "Fun to drive.",
+          "rating": 4
+        },
+        {
+          "name": "Sophia Clark",
+          "comment": "Great fuel efficiency.",
+          "rating": 5
+        }
+      ],
+      "priceOnSale": 230
+    },
+    {
+      "title": "new title",
+      "price": 0.1,
+      "carImage": "https://imgd.aeplcdn.com/370x208/n/cw/ec/130591/fronx-exterior-right-front-three-quarter-109.jpeg?isig=0&q=80",
+      "description": "error",
+      "id": 19
+    },
+    {
+      "id": 5,
+      "title": "Chevrolet Camaro",
+      "type": "Coupe",
+      "liter": 6.2,
+      "steering": "LHD",
+      "capacity": 2,
+      "price": 550,
+      "carImage": "https://www.motortrend.com/uploads/sites/10/2020/12/2021-chevrolet-camaro-zl1-coupe-angular-front.png",
+      "detailImages": [
+        "https://hips.hearstapps.com/hmg-prod/images/2024-chevrolet-camaro-ss-collectors-edition-1-647e1933c6c20.jpg?crop=0.755xw:0.696xh;0.112xw,0.233xh&resize=1200:*",
+        "https://arabam-blog.mncdn.com/wp-content/uploads/2021/03/822061.jpg",
+        "https://i2.wp.com/1.bp.blogspot.com/-2low5R2lp4E/Vu-k6e8vNpI/AAAAAAAAsg0/ozAzOTGdfYQl4YZAMSi-cq4p0wLeZ9G5A/s1600/Chevrolet-Camaro-ZL1-15.jpg?ssl=1"
+      ],
+      "description": "The Chevrolet Camaro is a classic American muscle car known for its powerful performance and iconic design. With a 6.2-liter engine, it offers an exhilarating driving experience. The Camaro's bold exterior, high-performance features, and rich history make it a favorite among car enthusiasts.",
+      "rating": 3,
+      "reviews": [
+        {
+          "name": "Emma Turner",
+          "comment": "Love the roar of the engine.",
+          "rating": 5
+        },
+        {
+          "name": "James White",
+          "comment": "Head-turning design.",
+          "rating": 4
+        },
+        {
+          "name": "Sophie Adams",
+          "comment": "Fast acceleration.",
+          "rating": 5
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "title": "Mazda CX-5",
+      "type": "SUV",
+      "liter": 2.5,
+      "steering": "RHD",
+      "capacity": 5,
+      "price": 320,
+      "carImage": "https://www.mazda.co.za/globalassets/cars/cx-5/grades/2022/1000x525-2.0l-active-manual.png",
+      "detailImages": [
+        "https://www.mazdausa.com/siteassets/vehicles/2024/cx-5/new-build--price/trims/ext.-360s/2.5-s-select/51k/e360-my24-cx50-selectpackage-rhodiumwhite-016.jpg",
+        "https://di-uploads-pod17.dealerinspire.com/tulleymazda/uploads/2021/03/2021-cx-5-interior-.jpg",
+        "https://dealerinspire-image-library-prod.s3.us-east-1.amazonaws.com/images/EBPR6IaAqSeoonA0GUA82mkvV5KfAVKhgqkVTdZp.jpg"
+      ],
+      "description": "Compact SUV with stylish exterior.",
+      "rating": 4.5,
+      "reviews": [
+        {
+          "name": "Aiden Turner",
+          "comment": "Responsive handling.",
+          "rating": 4
+        },
+        {
+          "name": "Scarlett Harris",
+          "comment": "Comfortable ride.",
+          "rating": 5
+        },
+        {
+          "name": "Ethan White",
+          "comment": "Sleek design.",
+          "rating": 4
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "title": "Chevrolet Malibu",
+      "type": "Sedan",
+      "liter": 1.5,
+      "steering": "LHD",
+      "capacity": 4,
+      "price": 300,
+      "carImage": "https://images.hgmsites.net/med/2023-chevrolet-malibu-4-door-sedan-1lt-angular-front-exterior-view_100867500_m.jpg",
+      "detailImages": [
+        "https://cargtr.com/wp-content/uploads/2020/12/car-gtr-2-13.jpg.webp",
+        "https://di-uploads-pod4.dealerinspire.com/trappchevy/uploads/2021/03/2021-Chevrolet-Malibu-sociall.jpg",
+        "https://cargtr.com/wp-content/uploads/2020/12/car-gtr-3-14.jpg.webp"
+      ],
+      "description": "The Chevrolet Malibu is a stylish midsize sedan that combines modern design with practical features. With a range of efficient engines, including the fuel-efficient 1.5-liter turbocharged four-cylinder, it offers a comfortable and smooth ride. The Malibu's spacious interior, user-friendly infotainment system, and advanced safety features make it a reliable choice for daily commuting. Its sleek exterior design, aerodynamic profile, and attention to detail contribute to a well-rounded and appealing sedan.",
+      "rating": 4.3,
+      "reviews": [
+        {
+          "name": "Ryan Davis",
+          "comment": "Great gas mileage.",
+          "rating": 4
+        },
+        {
+          "name": "Grace Turner",
+          "comment": "Comfortable seats.",
+          "rating": 4
+        },
+        {
+          "name": "Lucas Smith",
+          "comment": "Smooth ride.",
+          "rating": 4
+        }
+      ],
+      "priceOnSale": 280
+    },
+    {
+      "id": 13,
+      "title": "Volvo XC90",
+      "type": "SUV",
+      "liter": 2,
+      "steering": "LHD",
+      "capacity": 7,
+      "price": 550,
+      "carImage": "https://todaysparent.mblycdn.com/uploads/tp/2018/05/2018-Volvo-XC90.jpeg",
+      "detailImages": [
+        "https://www.volvocars.com/images/v/-/media/applications/pdpspecificationpage/my24/xc90-fuel/pdp/xc90-fuel-specshighlight-4x3.jpg?h=1440&iar=0&w=1920",
+        "https://i1.wp.com/www.sekizsilindir.com/wp-content/uploads/2015/04/volvo-xc90-excellence-1.jpg?fit=1600%2C843&ssl=1",
+        "https://www.hancar.com.tr/img/araclar/17282/1.jpg"
+      ],
+      "description": "The Volvo XC90 is a luxury SUV that exemplifies Scandinavian design and innovation. With a focus on safety, the XC90 features advanced driver-assistance technologies and a robust chassis. Powered by a range of efficient engines, including the powerful T6 and T8 hybrid options, it delivers a smooth and comfortable driving experience. The XC90's spacious and luxurious interior, intuitive infotainment system, and elegant design make it a top choice for those who prioritize safety and style in a premium SUV.",
+      "rating": 3.8,
+      "reviews": [
+        {
+          "name": "Isaac Turner",
+          "comment": "Spacious interior.",
+          "rating": 5
+        },
+        {
+          "name": "Lily Harris",
+          "comment": "Smooth ride.",
+          "rating": 4
+        },
+        {
+          "name": "Jackson Smith",
+          "comment": "Impressive technology.",
+          "rating": 5
         }
       ]
     }

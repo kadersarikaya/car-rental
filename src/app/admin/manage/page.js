@@ -3,6 +3,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Link from "next/link";
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Admincars = () => {
     const [cars, setCars] = useState([]);
@@ -27,14 +29,14 @@ const Admincars = () => {
             await axios.delete(`http://localhost:4000/cars/${id}`);
            const filtered = cars.filter((car)=>car.id!=id)
            setCars(filtered)
-            alert("deleted success")
+            toast.success('Car deleted successfully'); 
         } catch (error) {
             console.error("Error deleting car: ", error);
         }
     };
 
     return (
-        <div className="container mx-auto p-8">
+        <div className="p-4">
             <div className="flex justify-between items-center mb-8">
                 <div className=""></div>
                 <Link href='/admin/manage/add-car'>
@@ -73,6 +75,7 @@ const Admincars = () => {
                     ))}
                 </div>
             )}
+            <ToastContainer position="bottom-right" autoClose={3000} />
         </div>
     );
 };

@@ -6,6 +6,8 @@ import Button from '@/components/Button';
 import Rating from '@/components/Rating';
 import { useParams } from "next/navigation";
 import axios from 'axios';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Payment = () => {
     const initialValues = {
@@ -33,7 +35,10 @@ const Payment = () => {
     const makeOrder = async () => {
         try {
             const res = await axios.post('http://localhost:4000/orders/', car)
-            return res.data
+            const order = res.data;
+            toast.success(`Order has been placed successfully!`);
+            if(ordersSlice.find((order)))
+            return order;
         }
         catch (error) {
             console.log(error);
@@ -150,6 +155,7 @@ const Payment = () => {
                     </Form>
                 </Formik>
             </div>
+            <ToastContainer position="bottom-right" autoClose={3000} />
         </div>
     );
 };

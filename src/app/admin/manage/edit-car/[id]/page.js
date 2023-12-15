@@ -4,12 +4,16 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import { useParams } from "next/navigation";
 import axios from "axios";
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 // Yup şema tanımını oluşturun
 const validationSchema = Yup.object().shape({
     title: Yup.string().required("Title is required"),
     price: Yup.number().positive("Price must be a positive number").required("Price is required"),
     carImage: Yup.string().url("Invalid image URL").required("Image URL is required"),
+    type: Yup.string().required("Type is required"),
+    capacity: Yup.string().required("Capacity is required"),
     description: Yup.string()
         .min(2, 'Too short')
         .max(250, 'Too long')
@@ -45,13 +49,14 @@ const EditCarPage = () => {
             price: car?.price || "",
             carImage: car?.carImage || "",
             description: car?.description || "",
+            type: "",
+            capacity: ""
         },
         validationSchema,
         onSubmit: async (values) => {
             try {
-                // Axios ile server'a PUT isteği gönderin
                 await axios.put(`http://localhost:4000/cars/${id}`, values);
-                router.push("/admin/manage");
+                toast.success('Car updated successfully'); 
             } catch (error) {
                 console.error("Error updating car: ", error);
             }
@@ -121,29 +126,77 @@ const EditCarPage = () => {
                         <p className="text-red-500 text-sm mt-1">{formik.errors.carImage}</p>
                     )}
                 </div>
-                <div className="mb-4">
-                    <label htmlFor="description" className="block text-gray-700 text-sm font-bold mb-2">
-                        Description
-                    </label>
-                    <textarea
-                        id="description"
-                        name="description"
-                        onChange={formik.handleChange}
-                        onBlur={formik.handleBlur}
-                        value={formik.values.description}
-                        className={`border-2 rounded w-full py-2 px-3 ${formik.touched.description && formik.errors.description ? "border-red-500" : "border-gray-300"
-                            }`}
-                    />
-                    {formik.touched.description && formik.errors.description && (
-                        <p className="text-red-500 text-sm mt-1">{formik.errors.description}</p>
-                    )}
-                </div>
+                    <div className="mb-4">
+                        <label htmlFor="description" className="block text-gray-700 text-sm font-bold mb-2">
+                            Description
+                        </label>
+                        <textarea
+                            id="description"
+                            name="description"
+                            onChange={formik.handleChange}
+                            onBlur={formik.handleBlur}
+                            value={formik.values.description}
+                            className={`border-2 rounded w-full py-2 px-3 ${formik.touched.description && formik.errors.description ? "border-red-500" : "border-gray-300"
+                                }`}
+                        />
+                        {formik.touched.description && formik.errors.description && (
+                            <p className="text-red-500 text-sm mt-1">{formik.errors.description}</p>
+                        )}
+                    </div>
+                    <div className="mb-4">
+                        <label htmlFor="type" className="block text-gray-700 text-sm font-bold mb-2">
+                            Car Type
+                        </label>
+                        <select
+                            id="type"
+                            name="type"
+                            onChange={formik.handleChange}
+                            onBlur={formik.handleBlur}
+                            value={formik.values.type}
+                            className={`border-2 rounded w-full py-2 px-3 ${formik.touched.type && formik.errors.type ? "border-red-500" : "border-gray-300"
+                                }`}
+                        >
+                            <option value="" label="Select Car Type" />
+                            <option value="Coupe" label="Coupe" />
+                            <option value="Sedan" label="Sedan" />
+                            <option value="Hatchback" label="Hatchback" />
+                            <option value="Electric" label="Electric" />
+                            <option value="SUV" label="SUV" />
+                        </select>
+                        {formik.touched.type && formik.errors.type && (
+                            <p className="text-red-500 text-sm mt-1">{formik.errors.type}</p>
+                        )}
+                    </div>
+                    <div className="mb-4">
+                        <label htmlFor="type" className="block text-gray-700 text-sm font-bold mb-2">
+                            Car Capacity
+                        </label>
+                        <select
+                            id="capacity"
+                            name="capacity"
+                            onChange={formik.handleChange}
+                            onBlur={formik.handleBlur}
+                            value={formik.values.capacity}
+                            className={`border-2 rounded w-full py-2 px-3 ${formik.touched.capacity && formik.errors.type ? "border-red-500" : "border-gray-300"
+                                }`}
+                        >
+                            <option value="" label="Select capacity" />
+                            <option value="2" label="2" />
+                            <option value="4" label="4" />
+                            <option value="5" label="5" />
+                            <option value="7" label="7" />
+                        </select>
+                        {formik.touched.type && formik.errors.type && (
+                            <p className="text-red-500 text-sm mt-1">{formik.errors.type}</p>
+                        )}
+                    </div>
                 <div>
                     <button type="submit" className="bg-blue-500 text-white py-2 px-4 rounded">
                         Update Car
                     </button>
                 </div>
             </form>
+            <ToastContainer position="bottom-right" autoClose={3000} />
         </div>
     );
 };

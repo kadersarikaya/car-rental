@@ -24,7 +24,7 @@ const CarDetail = () => {
         try {
             const res = await axios.get(`http://localhost:4000/cars/${id}`)
             setCar(res.data)
-            setSelectedImage(res.data?.detailImages[0]); // Set the selected image here
+            setSelectedImage(res.data?.detailImages?.length ? res.data.detailImages[0] : res.data?.carImage);
             setLoading(false)
         }
         catch (error) {
@@ -59,13 +59,12 @@ const CarDetail = () => {
                 <div className="">
                     <div className="">
                         <img 
-                        width={492} 
-                        height={360} 
-                        src={selectedImage} 
-                        className="rounded-lg w-[492px] h-[360px]"
+                            width={492} 
+                            height={360} 
+                            src={selectedImage}                            className="rounded-lg w-[492px] h-[360px]"
                         />
                         <div className="flex lg:justify-between flex-wrap pt-6 items-center">
-                            {car?.detailImages.map((image, index) => (
+                            {car?.detailImages?.map((image, index) => (
                                 <img
                                     key={index}
                                     src={image}
@@ -83,8 +82,8 @@ const CarDetail = () => {
                         <div className="">
                             <h1 className="text-3xl font-bold" >{car?.title}</h1>
                             <div className="flex gap-1 pt-4 items-center">
-                                <Rating value={2}/>
-                                <p className="text-sm text-gray-400 font-medium">({car?.reviews?.length} Reviewer)</p>
+                                <Rating value={car?.rating || 4}/>
+                                <p className="text-sm text-gray-400 font-medium">({car?.reviews?.length || 1} Reviewer)</p>
                             </div>
                         </div>
                         <div className="">
@@ -146,17 +145,17 @@ const CarDetail = () => {
                     <div className="flex gap-2">
                         <h1 className="text-xl font-semibold">Reviews</h1>
                         <div className="font-bold text-sm text-white rounded-sm bg-indigo-600 py-1 px-5">
-                            {car?.reviews.length}
+                            {car?.reviews?.length || 1}
                         </div>
                     </div>
                     <div className="flex flex-col gap-6">
-                        {car?.reviews.map((review)=> (
+                        {car?.reviews?.map((review)=> (
                             <div className="flex flex-col pt-6">
                                 <div className="flex justify-between">
-                                    <div className="text-lg font-bold">{review.name}</div>
+                                    <div className="text-lg font-bold">{review?.name}</div>
                                     <div className="flex flex-col space-y-1">
                                         <p className="text-gray-400 font-medium text-sm">21 July 2022</p>
-                                        <Rating value={review.rating}/>
+                                        <Rating value={review?.rating}/>
                                     </div>
                                 </div>
                                 <div className="text-gray-400 text-sm">

@@ -5,6 +5,7 @@ import Card from '@/components/Card'
 import Image from 'next/image'
 import axios from 'axios'
 import SkeletonCard from '@/components/SkeletonCard'
+import Link from 'next/link'
 
 export default function Home() {
 const [cars,setCars] = useState([])
@@ -41,7 +42,9 @@ useEffect(() => {
         </div>
         <div className="flex py-7 justify-between">
           <p className="text-gray-400 font-semibold text-base">Popular Cars</p>
-          <p className="text-indigo-600 font-semibold cursor-pointer justify-end">View All</p>
+          <Link href="/category">
+            <p className="text-indigo-600 font-semibold cursor-pointer justify-end">View All</p>
+          </Link>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 md:gap-6">
           {isLoading
@@ -65,7 +68,9 @@ useEffect(() => {
             ))}
         </div>
         <div className="py-16 flex justify-center">
-          <Button btntext="Show more car" />
+          <Link href="/category">
+            <Button btntext="Show more car" />
+          </Link>
         </div>
       </div>
     </section>
