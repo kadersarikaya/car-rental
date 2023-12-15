@@ -9,17 +9,19 @@ import Image from "next/image";
 import Link from "next/link";
 import { useDispatch, useSelector} from 'react-redux';
 import { toggleFavorite } from "@/store/favoritesSlice";
+import { selectTheme } from '@/store/themeSlice';
 
 const Card = React.memo = ({ car }) => {
     const favorites = useSelector((state) => state.favorites);
     const dispatch = useDispatch();
-    
+    const isDarkMode = useSelector(selectTheme);
+
     const handleFavoriteToggle = (id) => {
         dispatch(toggleFavorite({ id }))
     }
 
     return (
-        <div key={car.id} className="w-full flex flex-col justify-between h-full text-black rounded-lg p-6 bg-white">
+        <div key={car.id} className={` ${isDarkMode ? "bg-[#333] border text-white" : "text-black bg-white"} w-full flex flex-col justify-between h-full  rounded-lg p-6`}>
             <div className="flex justify-between">
                 <div className="">
                     <h1 className="text-xl font-bold">{car?.title}</h1>

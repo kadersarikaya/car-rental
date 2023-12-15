@@ -582,38 +582,6 @@
           "rating": 4
         }
       ]
-    },
-    {
-      "title": "mdövö",
-      "price": 50,
-      "carImage": "https://img.freepik.com/free-photo/luxurious-car-parked-highway-with-illuminated-headlight-sunset_181624-60607.jpg?size=626&ext=jpg&ga=GA1.1.1222169770.1702339200&semt=sph",
-      "description": " möf vöb",
-      "type": "Coupe",
-      "capacity": "5",
-      "id": 18
-    },
-    {
-      "title": "new title",
-      "price": 0.1,
-      "carImage": "https://imgd.aeplcdn.com/370x208/n/cw/ec/130591/fronx-exterior-right-front-three-quarter-109.jpeg?isig=0&q=80",
-      "description": "error",
-      "id": 19
-    },
-    {
-      "title": "yeni araba ekle",
-      "price": 12,
-      "carImage": "https://imgd.aeplcdn.com/370x208/n/cw/ec/130591/fronx-exterior-right-front-three-quarter-109.jpeg?isig=0&q=80",
-      "description": "jsfjebjdk",
-      "id": 20
-    },
-    {
-      "title": "gjhbjvh",
-      "price": 12,
-      "carImage": "https://img.freepik.com/free-photo/luxurious-car-parked-highway-with-illuminated-headlight-sunset_181624-60607.jpg?size=626&ext=jpg&ga=GA1.1.1222169770.1702339200&semt=sph",
-      "description": "mknjk",
-      "type": "Hatchback",
-      "capacity": "4",
-      "id": 21
     }
   ],
   "orders": [
@@ -787,13 +755,6 @@
         }
       ],
       "priceOnSale": 230
-    },
-    {
-      "title": "new title",
-      "price": 0.1,
-      "carImage": "https://imgd.aeplcdn.com/370x208/n/cw/ec/130591/fronx-exterior-right-front-three-quarter-109.jpeg?isig=0&q=80",
-      "description": "error",
-      "id": 19
     },
     {
       "id": 5,

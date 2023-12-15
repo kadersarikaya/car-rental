@@ -2,6 +2,8 @@
 import Card from "@/components/Card";
 import React, {useState, useEffect} from "react";
 import axios from "axios";
+import { selectTheme } from '@/store/themeSlice';
+import { useSelector } from "react-redux";
 
 const CarCategory = () => {
     const [isSidebarOpen, setSidebarOpen] = useState(true);
@@ -9,6 +11,8 @@ const CarCategory = () => {
     const [cars, setCars] = useState([]);
     const [loading, setLoading] = useState(true);
     const [filteredCars, setFilteredCars] = useState([])
+
+    const isDarkMode = useSelector(selectTheme);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -74,7 +78,7 @@ const CarCategory = () => {
             >
                 {isSidebarOpen ? 'Close' : 'Open'}
             </button>
-                <div className={`absolute md:sticky left-0 w-64 bg-white transform p-8 transition-transform ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'
+            <div className={`absolute md:sticky left-0 w-64 ${isDarkMode ? "bg-[#333] text-white" : "bg-white text-black" } transform p-8 transition-transform ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'
                         }`}
                 >
                     <div className="flex flex-col gap-10">

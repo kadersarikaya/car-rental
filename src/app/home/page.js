@@ -43,7 +43,7 @@ useEffect(() => {
         <div className="flex py-7 justify-between">
           <p className="text-gray-400 font-semibold text-base">Popular Cars</p>
           <Link href="/category">
-            <p className="text-indigo-600 font-semibold cursor-pointer justify-end">View All</p>
+            <p className="text-indigo-600 font-semibold cursor-pointer justify-end hover:underline">View All</p>
           </Link>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 md:gap-6">

@@ -48,7 +48,7 @@ const Admincars = () => {
             ) : (
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
                     {cars.map((car) => (
-                        <div key={car.id} className="bg-white p-4 rounded-lg shadow-md">
+                        <div key={car.id} className="bg-white text-black p-4 rounded-lg shadow-md">
                             <img
                                 src={car.carImage}
                                 alt={car.title}

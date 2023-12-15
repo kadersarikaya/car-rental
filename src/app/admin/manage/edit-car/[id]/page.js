@@ -13,7 +13,7 @@ const validationSchema = Yup.object().shape({
     price: Yup.number().positive("Price must be a positive number").required("Price is required"),
     carImage: Yup.string().url("Invalid image URL").required("Image URL is required"),
     type: Yup.string().required("Type is required"),
-    capacity: Yup.string().required("Capacity is required"),
+    capacity: Yup.number().required("Capacity is required"),
     description: Yup.string()
         .min(2, 'Too short')
         .max(250, 'Too long')
@@ -73,7 +73,7 @@ const EditCarPage = () => {
             <h1 className="text-3xl font-bold mb-8">Edit Car</h1>
             <form onSubmit={formik.handleSubmit}>
                 <div className="mb-4">
-                    <label htmlFor="title" className="block text-gray-700 text-sm font-bold mb-2">
+                    <label htmlFor="title" className="block text-sm font-bold mb-2">
                         Title
                     </label>
                     <input
@@ -91,7 +91,7 @@ const EditCarPage = () => {
                     )}
                 </div>
                 <div className="mb-4">
-                    <label htmlFor="price" className="block text-gray-700 text-sm font-bold mb-2">
+                    <label htmlFor="price" className="block text-sm font-bold mb-2">
                         Price
                     </label>
                     <input
@@ -109,7 +109,7 @@ const EditCarPage = () => {
                     )}
                 </div>
                 <div className="mb-4">
-                    <label htmlFor="carImage" className="block text-gray-700 text-sm font-bold mb-2">
+                    <label htmlFor="carImage" className="block text-sm font-bold mb-2">
                         Car Image URL
                     </label>
                     <input
@@ -127,7 +127,7 @@ const EditCarPage = () => {
                     )}
                 </div>
                     <div className="mb-4">
-                        <label htmlFor="description" className="block text-gray-700 text-sm font-bold mb-2">
+                        <label htmlFor="description" className="block text-sm font-bold mb-2">
                             Description
                         </label>
                         <textarea
@@ -144,7 +144,7 @@ const EditCarPage = () => {
                         )}
                     </div>
                     <div className="mb-4">
-                        <label htmlFor="type" className="block text-gray-700 text-sm font-bold mb-2">
+                        <label htmlFor="type" className="block text-sm font-bold mb-2">
                             Car Type
                         </label>
                         <select
@@ -168,27 +168,23 @@ const EditCarPage = () => {
                         )}
                     </div>
                     <div className="mb-4">
-                        <label htmlFor="type" className="block text-gray-700 text-sm font-bold mb-2">
+                        <label htmlFor="type" className="block text-sm font-bold mb-2">
                             Car Capacity
                         </label>
-                        <select
-                            id="capacity"
-                            name="capacity"
-                            onChange={formik.handleChange}
-                            onBlur={formik.handleBlur}
-                            value={formik.values.capacity}
-                            className={`border-2 rounded w-full py-2 px-3 ${formik.touched.capacity && formik.errors.type ? "border-red-500" : "border-gray-300"
-                                }`}
-                        >
-                            <option value="" label="Select capacity" />
-                            <option value="2" label="2" />
-                            <option value="4" label="4" />
-                            <option value="5" label="5" />
-                            <option value="7" label="7" />
-                        </select>
-                        {formik.touched.type && formik.errors.type && (
-                            <p className="text-red-500 text-sm mt-1">{formik.errors.type}</p>
-                        )}
+                    <input
+                        type="number"
+                        id="capacity"
+                        name="capacity"
+                        onChange={formik.handleChange}
+                        onBlur={formik.handleBlur}
+                        value={formik.values.capacity}
+                        className={`border-2 rounded w-full py-2 px-3 ${formik.touched.capacity &&
+                            formik.errors.capacity ? "border-red-500" : "border-gray-300"
+                            }`}
+                    />
+                    {formik.touched.capacity && formik.errors.capacity && (
+                        <p className="text-red-500 text-sm mt-1">{formik.errors.capacity}</p>
+                    )}
                     </div>
                 <div>
                     <button type="submit" className="bg-blue-500 text-white py-2 px-4 rounded">

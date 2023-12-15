@@ -3,6 +3,7 @@ import './globals.css'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import { ReduxProvider } from '@/store/provider'
+import ThemeProvider from '@/components/ThemeProvider'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
@@ -13,11 +14,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body>
         <ReduxProvider>
-          <Navbar/>
-          {children}
-          <Footer/>
+          <ThemeProvider>
+            <Navbar/>
+            {children}
+            <Footer/>
+          </ThemeProvider>
         </ReduxProvider>
       </body>
     </html>

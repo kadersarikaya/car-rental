@@ -5,10 +5,13 @@ import { IoIosSettings, IoIosHelpCircle } from "react-icons/io";
 import { CiLogout } from "react-icons/ci";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { selectTheme } from '@/store/themeSlice';
+import { useSelector } from "react-redux";
 
 const layout = ({children}) => {
   const router = useRouter()
   const [selectedMenu, setSelectedMenu] = useState(null);
+  const isDarkMode = useSelector(selectTheme);
 
     const handleLogout = async () => {
       router.push("/")
@@ -17,7 +20,7 @@ const layout = ({children}) => {
   return (
     <>
     <div className="flex">
-      <div className={`absolute md:sticky left-0 w-64 bg-white transform p-8 transition-transform'
+      <div className={`absolute md:sticky ${isDarkMode ? "bg-[#333] text-white" : "bg-white text-black"} left-0 w-64 transform p-8 transition-transform'
                   }`}>
           <div className="">
               <div className="flex flex-col gap-10">

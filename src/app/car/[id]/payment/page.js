@@ -65,12 +65,12 @@ const Payment = () => {
 
     return (
         <div className="flex flex-col lg:flex-row max-h-max justify-center gap-8 px-4 pt-8 pb-24">
-            <div className="max-w-lg w-full lg:w-1/2 h-fit flex flex-col gap-8 flex-1 p-8 bg-white rounded-md shadow-md">
-                <h1 className="text-2xl font-bold mb-6">Rental Summary</h1>
+            <div className="max-w-lg w-full lg:w-1/2 h-fit flex flex-col gap-8 flex-1 p-8 text-black bg-white rounded-md shadow-md">
+                <h1 className="text-2xl font-bold mb-6 ">Rental Summary</h1>
                 <div className="items-center">
                     <img src={car?.carImage} alt="" />
                     <div className="">
-                        <h1 className='text-2xl md:text-3xl font-bold py-1' >{car?.title}</h1>
+                        <h1 className='text-2xl md:text-3xl font-bold py-1 ' >{car?.title}</h1>
                         <Rating value={car?.rating} />
                     </div>
                 </div>
@@ -90,7 +90,7 @@ const Payment = () => {
                     </div>
                 </div>
             </div>
-            <div className="max-w-lg w-full lg:w-1/2 h-fit flex-1 p-8 bg-white rounded-md shadow-md mb-8 lg:mb-0">
+            <div className="max-w-lg w-full lg:w-1/2 text-black h-fit flex-1 p-8 bg-white rounded-md shadow-md mb-8 lg:mb-0">
                 <h1 className="text-2xl font-bold mb-6">Billing Info</h1>
                 <Formik
                     initialValues={initialValues}

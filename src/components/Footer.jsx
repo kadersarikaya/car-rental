@@ -1,8 +1,12 @@
+"use client"
 import React from "react";
+import { selectTheme } from '@/store/themeSlice';
+import { useSelector } from "react-redux";
 
 const Footer = () => {
+  const isDarkMode = useSelector(selectTheme);
   return (
-    <footer className="bg-white pt-20 px-14 pb-7 flex flex-col gap-6">
+    <footer className={` ${isDarkMode ? "bg-[#333] text-white ": "bg-white text-black"} pt-20 px-14 pb-7 flex flex-col gap-6`}>
       <div className="flex md:flex-row flex-col  gap-2 justify-between">
         <div className="">
           <h1 className="text-indigo-600 font-bold text-3xl">MORENT</h1>

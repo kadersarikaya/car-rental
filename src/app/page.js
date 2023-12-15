@@ -75,9 +75,9 @@ const LoginForm = () => {
     }
 
     return (
-        <div className="bg-gray-200 min-h-screen flex items-center justify-center">
+        <div className="min-h-screen flex items-center justify-center">
             <div className="bg-white p-8 rounded shadow-md w-full max-w-md">
-                <h2 className="text-2xl font-bold mb-6 text-center">Login</h2>
+                <h2 className="text-2xl font-bold mb-6 text-gray-700 text-center">Login</h2>
                 <form onSubmit={formik.handleSubmit}>
                     <div className="mb-4">
                         <label htmlFor="email" className="block text-gray-700 text-sm font-bold mb-2">
@@ -128,7 +128,7 @@ const LoginForm = () => {
                         {isLoading ? 'Loading...' : 'Login'}
                     </button>
                 </form>
-                <p className="text-sm text-center mt-4">
+                <p className="text-sm text-center mt-4 text-gray-700">
                     Don't have an account?{' '}
                     <span
                         className="text-blue-500 hover:underline cursor-pointer"

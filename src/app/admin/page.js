@@ -70,7 +70,7 @@ const AdminDashboard = () => {
   return (
     <div className="flex md:justify-normal justify-center h-auto">
         <div className="flex justify-between gap-4 p-4">
-            <div className="p-6 bg-white rounded-lg w-full ">
+            <div className="p-6 bg-white text-black rounded-lg w-full ">
                 <h2 className="text-xl font-bold pb-6">Recent Transaction</h2>
                 <div className="scroll-container gap-6 flex flex-col md:max-h-[500px] overflow-y-auto">
                     {orders.map((order)=> (
@@ -79,14 +79,14 @@ const AdminDashboard = () => {
                                 <img width={132} height={170} src={order.carImage} alt="" />
                                 <div className="flex flex-col gap-2">
                                     <h2 className="text-base font-bold">{order.title}</h2>
-                                    <p className="text-[#90A3BF] text-sm font-medium">{order.type}</p>
+                                    <p className="text-sm font-medium">{order.type}</p>
                                 </div>
                             </div>
                         </div>
                     ))}
                 </div>
             </div>
-            <div className="flex flex-col p-6 bg-white rounded-lg items-center">
+            <div className="flex flex-col p-6 bg-white text-black rounded-lg items-center">
                 <div className="pb-8">
                         <h1 className="pb-4 text-xl font-bold">Top 5 Car Rental</h1>
                         <div className="flex flex-col md:flex-row gap-4 p-6 bg-white rounded-lg items-center">

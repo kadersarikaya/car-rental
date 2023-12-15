@@ -8,11 +8,13 @@ import axios from "axios";
 import { toggleFavorite } from "@/store/favoritesSlice";
 import { useDispatch, useSelector } from "react-redux";
 import Link from "next/link";
+import { selectTheme } from '@/store/themeSlice';
 
 const CarDetail = () => {
     const [showReview, setShowReview] = useState(false)
     const [loading, setLoading] = useState(true)
     const [selectedImage, setSelectedImage] = useState()
+    const isDarkMode = useSelector(selectTheme);
 
     const handleImageClick = (image) => {
         setSelectedImage(image);
@@ -77,13 +79,13 @@ const CarDetail = () => {
                         </div>
                     </div>
                 </div>
-                <div className="bg-white rounded-lg p-6 flex flex-col gap-4 justify-between md:w-[492px] h-auto">
+                    <div className={`${isDarkMode ? "bg-[#333] text-white" : "bg-white text-black"} rounded-lg p-6 flex flex-col gap-4 justify-between md:w-[492px] h-auto`}>
                     <div className="flex justify-between">
                         <div className="">
                             <h1 className="text-3xl font-bold" >{car?.title}</h1>
                             <div className="flex gap-1 pt-4 items-center">
                                 <Rating value={car?.rating || 4}/>
-                                <p className="text-sm text-gray-400 font-medium">({car?.reviews?.length || 1} Reviewer)</p>
+                                <p className="text-sm font-medium">({car?.reviews?.length || 1} Reviewer)</p>
                             </div>
                         </div>
                         <div className="">
@@ -101,39 +103,39 @@ const CarDetail = () => {
                         </div>
                      </div>
                     <div className="">
-                        <p className="text-gray-400 text-lg md:text-xl leading-0 md:leading-8 font-medium">
+                        <p className="text-lg md:text-xl leading-0 md:leading-8 font-medium">
                             {car?.description}
                         </p>
                     </div>
                     <div className="flex gap-8">
                         <div className="">
                             <div className="flex gap-4">
-                                <p className="text-lg text-gray-400">Type Car</p>
-                                <p className="text-lg text-gray-700">{car?.type}</p>
+                                <p className="text-lg">Type Car</p>
+                                <p className="text-lg font-medium">{car?.type}</p>
                             </div>
                             <div className="flex gap-4">
-                                <p className="text-lg text-gray-400">Steering</p>
-                                <p className="text-lg text-gray-700">{car?.steering}</p>
+                                <p className="text-lg">Steering</p>
+                               <p className="text-lg font-medium">{car?.steering}</p>
                             </div>
                         </div>
                         <div className="">
                             <div className="flex gap-4">
-                                <p className="text-lg text-gray-400">Capacity</p>
-                                <p className="text-lg text-gray-700">{car?.capacity} Person</p>
+                                <p className="text-lg">Capacity</p>
+                                <p className="text-lg font-medium">{car?.capacity} Person</p>
                             </div>
                             <div className="flex gap-4" >
-                                <p className="text-lg text-gray-400">Gasoline</p>
-                                <p className="text-lg text-gray-700">{car?.liter} L</p>
+                                <p className="text-lg">Gasoline</p>
+                                <p className="text-lg font-medium">{car?.liter} L</p>
                             </div>
                         </div>
                     </div>
                     <div className="flex justify-between gap-3 items-center">
                         <div className="">
                             <div className="flex items-center">
-                                <p className="text-xl font-bold" >${car?.price}/ </p>
-                                <span className="font-medium text-gray-400 text-sm"> day</span>
+                               <p className="text-xl font-bold" >${car?.price}/ </p>
+                                <span className="font-mediumtext-sm"> day</span>
                             </div>
-                            {car?.priceOnSale && <span className="font-medium line-through text-gray-400 text-sm">${car.priceOnSale}</span>}
+                            {car?.priceOnSale && <span className="font-medium line-through text-sm">${car.priceOnSale}</span>}
                         </div>
                         <Link href={`${car.id}/payment`}>
                             <Button btntext="Rent Now" />
@@ -141,14 +143,14 @@ const CarDetail = () => {
                     </div>
                 </div>
                 </div>
-                <div className="bg-white p-6 rounded-lg w-full h-auto">
+                      <div className={`${isDarkMode ? "bg-[#333] text-white" : "bg-white text-black"} text-black p-6 rounded-lg w-full h-auto`}>
                     <div className="flex gap-2">
                         <h1 className="text-xl font-semibold">Reviews</h1>
                         <div className="font-bold text-sm text-white rounded-sm bg-indigo-600 py-1 px-5">
                             {car?.reviews?.length || 1}
                         </div>
                     </div>
-                    <div className="flex flex-col gap-6">
+                    <div className="flex flex-col">
                         {car?.reviews?.map((review)=> (
                             <div className="flex flex-col pt-6">
                                 <div className="flex justify-between">
@@ -164,7 +166,7 @@ const CarDetail = () => {
                             </div>
                         ))}
                         {showReview && 
-                            <div className="flex flex-col">
+                            <div className="flex flex-col pt-6">
                                 <div className="flex justify-between">
                                     <div className="text-lg font-bold">Alex Stanton</div>
                                     <div className="flex flex-col space-y-1">
