@@ -10,7 +10,7 @@ const AdminDashboard = () => {
     
     useEffect(() => {
         axios
-            .get('http://localhost:4000/orders')
+            .get('https://car-rental-api-0vx2.onrender.com/orders')
             .then(res => {
                 setOrders(res.data)
             })
@@ -108,34 +108,6 @@ const AdminDashboard = () => {
                                       </div>
                                   </div>
                               ))}
-                                {/* <div className="flex justify-between ">
-                                    <div className="flex gap-1 items-center">
-                                        <div className="rounded-full w-3 h-3 bg-[#175D9C]"></div>
-                                        <p className="text-sm font-semibold" >SUV</p>
-                                    </div>
-                                    <p className="text-sm font-semibold" >9,478</p>
-                                </div>
-                                <div className="flex justify-between ">
-                                    <div className="flex gap-1 items-center">
-                                        <div className="rounded-full w-3 h-3 bg-[#2185DE]"></div>
-                                        <p className="text-sm font-semibold" >Coupe</p>
-                                    </div>
-                                    <p className="text-sm font-semibold" >18,197</p>
-                                </div>
-                                <div className="flex justify-between gap-6">
-                                    <div className="flex gap-1 items-center">
-                                        <div className="rounded-full w-3 h-3 bg-[#63A9E8]"></div>
-                                        <p className="text-sm font-semibold" >Hatchback</p>
-                                    </div>
-                                    <p className="text-sm font-semibold" >12,510</p>
-                                </div>
-                                <div className="flex justify-between">
-                                    <div className="flex gap-1 items-center">
-                                        <div className="rounded-full w-3 h-3 bg-[#A6CEF2]"></div>
-                                        <p className="text-sm font-semibold">MPV</p>
-                                    </div>
-                                    <p className="text-sm font-semibold" >14,406</p>
-                                </div> */}
                             </div>
                         </div>
                 </div>

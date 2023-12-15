@@ -13,7 +13,7 @@ const Admincars = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get("http://localhost:4000/cars");
+                const response = await axios.get("https://car-rental-api-0vx2.onrender.com/cars");
                 setCars(response.data);
                 setLoading(false);
             } catch (error) {
@@ -26,8 +26,8 @@ const Admincars = () => {
 
     const handleDelete = async (id) => {
         try {
-            await axios.delete(`http://localhost:4000/cars/${id}`);
-           const filtered = cars.filter((car)=>car.id!=id)
+            const res = await axios.delete(`https://car-rental-api-0vx2.onrender.com/cars/${id}`);
+            const filtered = cars.filter((car)=>car.id!=id)
            setCars(filtered)
             toast.success('Car deleted successfully'); 
         } catch (error) {

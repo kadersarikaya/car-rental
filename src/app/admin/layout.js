@@ -21,7 +21,7 @@ const layout = ({children}) => {
     <>
     <div className="flex">
       <div className={`absolute md:sticky ${isDarkMode ? "bg-[#333] text-white" : "bg-white text-black"} left-0 w-64 transform p-8 transition-transform'
-                  }`}>
+        }`}>
           <div className="">
               <div className="flex flex-col gap-10">
                   <div className="">

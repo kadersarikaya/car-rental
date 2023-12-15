@@ -19,12 +19,11 @@ const Payment = () => {
 
     const [car, setCar] = useState();
     const { id } = useParams()
-    const [loading,setLoading] = useState(false)
 
     console.log(id)
     const getCar = async () => {
         try {
-            const res = await axios.get(`http://localhost:4000/cars/${id}`)
+            const res = await axios.get(`https://car-rental-api-0vx2.onrender.com/cars/${id}`)
             setCar(res.data)
         }
         catch (error) {
@@ -34,7 +33,7 @@ const Payment = () => {
 
     const makeOrder = async () => {
         try {
-            const res = await axios.post('http://localhost:4000/orders/', car)
+            const res = await axios.post('https://car-rental-api-0vx2.onrender.com/orders', car)
             const order = res.data;
             toast.success(`Order has been placed successfully!`);
             if(ordersSlice.find((order)))

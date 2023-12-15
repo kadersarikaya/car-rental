@@ -10,7 +10,7 @@ const TotalRevenueChart = () => {
     // Sipariş verilerini çekmek için bir axios isteği
     const fetchOrderData = async () => {
       try {
-        const response = await axios.get('http://localhost:4000/orders');
+        const response = await axios.get('https://car-rental-api-0vx2.onrender.com/orders');
         setOrderData(response.data);
       } catch (error) {
         console.error('Error fetching order data:', error);
@@ -18,20 +18,17 @@ const TotalRevenueChart = () => {
     };
 
     fetchOrderData();
-  }, []); // ComponentDidMount benzeri, sadece bir kere çalışsın
+  }, []); 
 
   useEffect(() => {
-    // Sipariş verileri geldiğinde grafiği oluştur
     if (orderData.length > 0) {
       createChart();
     }
   }, [orderData]);
 
   const createChart = () => {
-    // Canvas elementini seç ve context'i al
     const ctx = document.getElementById('totalRevenueChart').getContext('2d');
 
-    // Mevcut Chart nesnesini yok et
     const existingChart = Chart.getChart(ctx);
     if (existingChart) {
       existingChart.destroy();

@@ -13,7 +13,7 @@ const [isLoading, setLoading] = useState(true)
 
 useEffect(() => {
   axios
-    .get('http://localhost:4000/cars')
+    .get('https://car-rental-api-0vx2.onrender.com/cars')
     .then(res => {
       setCars(res.data)
       setLoading(false)

@@ -32,8 +32,7 @@ const AddCarPage = () => {
         validationSchema,
         onSubmit: async (values) => {
             try {
-                // Axios ile server'a POST isteği gönderin
-                await axios.post("http://localhost:4000/cars", values);
+                await axios.post("https://car-rental-api-0vx2.onrender.com/cars", values);
                 toast.success('Car added successfully'); 
             } catch (error) {
                 console.error("Error adding car: ", error);

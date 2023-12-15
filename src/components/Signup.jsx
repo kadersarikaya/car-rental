@@ -25,16 +25,13 @@ const Signup = () => {
             setIsLoading(true);
             createUserWithEmailAndPassword(auth, values.email, values.password)
                 .then((userCredential) => {
-                    // Signed up 
                     const user = userCredential.user;
                     router.push("/home")
-                    // ...
                 })
                 .catch((error) => {
                     console.error(error);
                     setError('An unexpected error occurred. Please try again.');
 
-                    // You can check the error code to determine the type of error
                     switch (error.code) {
                         case 'auth/weak-password':
                             setError('Password should be at least 6 characters long.');
@@ -59,7 +56,6 @@ const Signup = () => {
         setShowLoginForm(true);
     };
 
-    // Conditional rendering based on showLoginForm state
     if (showLoginForm) {
         return <LoginForm />
     }

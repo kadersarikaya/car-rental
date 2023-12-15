@@ -17,7 +17,7 @@ const CarCategory = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get("http://localhost:4000/cars");
+                const response = await axios.get("https://car-rental-api-0vx2.onrender.com/cars");
                 setCars(response.data);
                 setFilteredCars(response.data)
                 setLoading(false);

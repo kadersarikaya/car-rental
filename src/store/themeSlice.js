@@ -25,7 +25,6 @@ export const themeSlice = createSlice({
     extraReducers: (builder) => {
         builder
             .addDefaultCase((state) => {
-                // localStorage'dan yüklenen tema değeri
                 const storedTheme = JSON.parse(localStorage.getItem('theme'));
                 if (storedTheme) {
                     state.isDarkMode = storedTheme.isDarkMode;

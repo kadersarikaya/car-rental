@@ -7,7 +7,6 @@ import axios from "axios";
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-// Yup şema tanımını oluşturun
 const validationSchema = Yup.object().shape({
     title: Yup.string().required("Title is required"),
     price: Yup.number().positive("Price must be a positive number").required("Price is required"),
@@ -26,36 +25,34 @@ const EditCarPage = () => {
 
     const [car, setCar] = useState(null);
 
-    // Eğer id varsa, aracın detaylarını getirin
     useEffect(() => {
         const getCarDetails = async () => {
             try {
-                const response = await axios.get(`http://localhost:4000/cars/${id}`);
+                const response = await axios.get(`https://car-rental-api-0vx2.onrender.com/cars/${id}`);
                 setCar(response.data);
             } catch (error) {
                 console.error("Error fetching car details: ", error);
             }
         };
-
         if (id) {
             getCarDetails();
         }
     }, [id]);
 
-    // Formik hook'u ile formu oluşturun
     const formik = useFormik({
-        initialValues: {
+            initialValues: {
             title: car?.title || "",
             price: car?.price || "",
             carImage: car?.carImage || "",
             description: car?.description || "",
-            type: "",
-            capacity: ""
+            type: car?.type || "",
+            capacity: car?.capacity || "",
         },
         validationSchema,
         onSubmit: async (values) => {
             try {
-                await axios.put(`http://localhost:4000/cars/${id}`, values);
+                await axios.put(`https://car-rental-api-0vx2.onrender.com/cars/${id}`,
+                 values);
                 toast.success('Car updated successfully'); 
             } catch (error) {
                 console.error("Error updating car: ", error);

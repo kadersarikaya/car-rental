@@ -24,7 +24,7 @@ const CarDetail = () => {
 
     const getCar = async () => {
         try {
-            const res = await axios.get(`http://localhost:4000/cars/${id}`)
+            const res = await axios.get(`https://car-rental-api-0vx2.onrender.com/cars/${id}`)
             setCar(res.data)
             setSelectedImage(res.data?.detailImages?.length ? res.data.detailImages[0] : res.data?.carImage);
             setLoading(false)
@@ -79,7 +79,7 @@ const CarDetail = () => {
                         </div>
                     </div>
                 </div>
-                    <div className={`${isDarkMode ? "bg-[#333] text-white" : "bg-white text-black"} rounded-lg p-6 flex flex-col gap-4 justify-between md:w-[492px] h-auto`}>
+                    <div className={`${isDarkMode ? "bg-[#333] text-white" : "bg-white text-gray-700"} rounded-lg p-6 flex flex-col gap-4 justify-between md:w-[492px] h-auto`}>
                     <div className="flex justify-between">
                         <div className="">
                             <h1 className="text-3xl font-bold" >{car?.title}</h1>
