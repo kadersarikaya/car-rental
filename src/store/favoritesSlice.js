@@ -14,12 +14,7 @@ export const favoritesSlice = createSlice({
     reducers: {
         toggleFavorite: (state, action) => {
             const { id } = action.payload;
-            // Toggle favorite status
-            state = {
-                ...state,
-                [id]: !state[id],
-            };
-            // Update local storage
+            state[id] = !state[id];
             localStorage.setItem("favorites", JSON.stringify(state));
         },
     },
