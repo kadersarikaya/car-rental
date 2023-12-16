@@ -28,7 +28,7 @@ const Navbar = () => {
     const fetchData = async () => {
       try {
         if (searchInput.trim() !== '') {
-          const response = await axios.get(`http://localhost:4000/cars?q=${searchInput}`);
+          const response = await axios.get(`https://car-rental-api-0vx2.onrender.com/cars?q=${searchInput}`);
           setQueryResult(response.data);
         } else {
           setQueryResult([]);
