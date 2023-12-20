@@ -1,36 +1,51 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Car Rental Website
 
-## Getting Started
+This project is a web application for managing car rental operations. Firebase is used for authentication, providing login and registration functionalities for both users and admins. The application supports two roles: user and admin.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### User Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Authentication:** Users can register and log in to the system.
+- **Car Listing:** Users can view a list of available cars.
+- **Filtering:** Cars can be filtered by category, price, and capacity.
+- **Car Details:** Users can view detailed information about a specific car.
+- **Car Rental:** Users can rent a car.
+- **Car Search:** Users can search cars.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### Admin Features
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- **Car Management:** Admins can add, edit, and delete cars.
+- **Analytics:** Admins can view analytics regarding the number of car rentals.
 
-## Learn More
+## Technologies Used
 
-To learn more about Next.js, take a look at the following resources:
+- **Frontend:** Next.js, Tailwind CSS
+- **Authentication:** Firebase Authentication
+- **API:** JSON Server with Axios
+- **Charting:** Chart.js
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Installation
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+1. Clone the repository: `git clone https://github.com/your-username/car-rental.git`
+2. Install dependencies: `npm install`
+3. Run the development server: `npm run dev`
 
-## Deploy on Vercel
+## Configuration
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Set up Firebase Authentication and replace the Firebase configuration in the project.
+2. Adjust the JSON Server configuration for the API.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Usage
+
+- Access the application at `http://localhost:3000`.
+- Use the navigation to explore available cars, filter them, and view details.
+- Log in with admin credentials to access the admin dashboard for car management and analytics.
+
+## Contributing
+
+Contributions are welcome! Please follow the [contribution guidelines](CONTRIBUTING.md).
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
