@@ -27,7 +27,7 @@ This project is a web application for managing car rental operations. Firebase i
 
 ## Installation
 
-1. Clone the repository: `git clone https://github.com/your-username/car-rental.git`
+1. Clone the repository: `git clone https://github.com/kadersarikaya/sisterslab-project.git`
 2. Install dependencies: `npm install`
 3. Run the development server: `npm run dev`
 
